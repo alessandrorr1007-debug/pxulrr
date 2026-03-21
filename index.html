@@ -2,39 +2,51 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Pxul RR | Portafolio</title>
+<title>Pxul RR | Portafolio PRO</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-html {
-  scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
   background: #020617;
   color: white;
+  overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* CURSOR */
+.cursor {
+  width: 15px;
+  height: 15px;
+  background: #38bdf8;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* NAV */
 nav {
   position: fixed;
   width: 100%;
-  top: 0;
-  background: rgba(2,6,23,0.8);
-  backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   gap: 20px;
   padding: 15px;
+  background: rgba(2,6,23,0.7);
+  backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 14px;
 }
 
 nav a:hover {
@@ -60,6 +72,7 @@ h1 {
   color: #38bdf8;
 }
 
+/* BOTONES */
 .btn {
   margin-top: 20px;
   padding: 12px 25px;
@@ -71,7 +84,7 @@ h1 {
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  box-shadow: 0 0 20px #38bdf8;
 }
 
 /* SECCIONES */
@@ -94,12 +107,13 @@ h2 {
   padding-left: 10px;
 }
 
-/* CARDS */
+/* GRID */
 .grid {
   display: grid;
   gap: 20px;
 }
 
+/* CARDS */
 .card {
   background: #0f172a;
   padding: 20px;
@@ -108,8 +122,8 @@ h2 {
 }
 
 .card:hover {
-  transform: translateY(-8px) scale(1.02);
-  background: #1e293b;
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px #38bdf8;
 }
 
 /* SKILLS */
@@ -121,120 +135,132 @@ h2 {
   border-radius: 8px;
 }
 
-/* BOTÓN WHATSAPP */
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25D366;
-  color: white;
   padding: 15px;
   border-radius: 50%;
-  font-size: 20px;
-  text-decoration: none;
 }
 
-/* BOTÓN ARRIBA */
-.top {
+/* PARTÍCULAS */
+canvas {
   position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background: #38bdf8;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 </style>
 </head>
 
 <body>
 
+<div class="cursor"></div>
+<canvas id="bg"></canvas>
+
 <nav>
-  <a href="#inicio">Inicio</a>
-  <a href="#sobre">Sobre mí</a>
-  <a href="#skills">Skills</a>
-  <a href="#proyectos">Proyectos</a>
-  <a href="#contacto">Contacto</a>
+<a href="#inicio">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#contacto">Contacto</a>
 </nav>
 
 <header id="inicio">
-  <h1>Hola, soy <span class="highlight">Pxul RR</span></h1>
-  <p id="typing"></p>
-  <a class="btn" href="https://wa.me/51999999999">💬 Contáctame</a>
+<h1>Hola, soy <span class="highlight">Pxul RR</span></h1>
+<p id="typing"></p>
+<a class="btn" href="https://wa.me/51934204042">💬 Trabajemos juntos</a>
 </header>
 
-<section id="sobre">
-  <h2>🚀 Sobre mí</h2>
-  <p>Estudiante de Ingeniería de Sistemas, enfocado en desarrollo web y chatbots para automatización de negocios.</p>
-</section>
-
-<section id="skills">
-  <h2>🛠️ Tecnologías</h2>
-  <div class="skills">
-    <span>JavaScript</span>
-    <span>Python</span>
-    <span>Firebase</span>
-    <span>Twilio</span>
-    <span>HTML</span>
-    <span>CSS</span>
-  </div>
+<section id="servicios">
+<h2>💸 Servicios</h2>
+<div class="grid">
+<div class="card">
+<h3>Chatbots WhatsApp</h3>
+<p>Automatizo reservas y atención al cliente.</p>
+</div>
+<div class="card">
+<h3>Desarrollo Web</h3>
+<p>Creo páginas modernas para negocios.</p>
+</div>
+</div>
 </section>
 
 <section id="proyectos">
-  <h2>💼 Proyectos</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Bot de citas médicas</h3>
-      <p>Automatización de reservas por WhatsApp.</p>
-    </div>
-    <div class="card">
-      <h3>Automatización n8n</h3>
-      <p>Flujos automáticos para negocios.</p>
-    </div>
-  </div>
+<h2>🚀 Proyectos</h2>
+<div class="grid">
+<div class="card">
+<h3>Bot de citas médicas</h3>
+<p>Sistema automático con Twilio y Firebase.</p>
+</div>
+</div>
 </section>
 
 <section id="contacto">
-  <h2>📞 Contacto</h2>
-  <p>Email: tucorreo@gmail.com</p>
+<h2>📞 Contacto</h2>
+<p>Email: tucorreo@gmail.com</p>
 </section>
 
-<footer>
-  <p>© 2026 Pxul RR</p>
-</footer>
-
-<!-- BOTONES -->
-<a class="whatsapp" href="https://wa.me/51999999999">💬</a>
-<div class="top" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️</div>
+<a class="whatsapp" href="https://wa.me/51934204042">💬</a>
 
 <script>
-// typing effect
-const text = "Desarrollador Web | Chatbots | Automatización";
+// cursor
+document.addEventListener("mousemove", e => {
+  document.querySelector(".cursor").style.transform =
+    `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+
+// typing
+let txt = "Desarrollador Web | Chatbots | Automatización";
 let i = 0;
-function typing() {
-  if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
+function type() {
+  if(i < txt.length){
+    document.getElementById("typing").innerHTML += txt.charAt(i);
     i++;
-    setTimeout(typing, 50);
+    setTimeout(type, 50);
   }
 }
-typing();
+type();
 
-// scroll animation
+// scroll
 const sections = document.querySelectorAll("section");
 window.addEventListener("scroll", () => {
   sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
+    if(sec.getBoundingClientRect().top < window.innerHeight - 100){
       sec.classList.add("show");
     }
   });
 });
+
+// partículas
+const canvas = document.getElementById("bg");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+for(let i=0;i<100;i++){
+  particles.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    r: Math.random()*2
+  });
+}
+
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p=>{
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle="#38bdf8";
+    ctx.fill();
+    p.y += 0.3;
+    if(p.y > canvas.height) p.y = 0;
+  });
+  requestAnimationFrame(draw);
+}
+draw();
 </script>
 
 </body>
