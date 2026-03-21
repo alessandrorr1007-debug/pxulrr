@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Pxul RR | Portafolio</title>
+<title>Pxul RR | Portafolio PRO</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -127,12 +127,22 @@ h2 {
 }
 
 /* SKILLS */
+.skills {
+  text-align: center;
+}
+
 .skills span {
   display: inline-block;
   background: #1e293b;
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 8px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #38bdf8;
+  color: black;
 }
 
 /* WHATSAPP */
@@ -163,6 +173,7 @@ canvas {
 <nav>
 <a href="#inicio">Inicio</a>
 <a href="#servicios">Servicios</a>
+<a href="#tecnologias">Tecnologías</a>
 <a href="#proyectos">Proyectos</a>
 <a href="#contacto">Contacto</a>
 </nav>
@@ -187,6 +198,20 @@ canvas {
 </div>
 </section>
 
+<section id="tecnologias">
+<h2>🛠️ Tecnologías</h2>
+<div class="skills">
+<span>JavaScript</span>
+<span>Python</span>
+<span>Firebase</span>
+<span>Twilio</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>n8n</span>
+<span>Git</span>
+</div>
+</section>
+
 <section id="proyectos">
 <h2>🚀 Proyectos</h2>
 <div class="grid">
@@ -199,7 +224,8 @@ canvas {
 
 <section id="contacto">
 <h2>📞 Contacto</h2>
-<p>Email: arodriguezr1020@gmail.com</p>
+<p>Email: <a href="mailto:arodriguezr1020@gmail.com" style="color:#38bdf8;">
+arodriguezr1020@gmail.com</a></p>
 </section>
 
 <a class="whatsapp" href="https://wa.me/51934204042">💬</a>
