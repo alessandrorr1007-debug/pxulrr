@@ -1,66 +1,241 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Portafolio</title>
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #0f172a;
-      color: white;
-      text-align: center;
-    }
-    header {
-      background: #1e293b;
-      padding: 20px;
-    }
-    section {
-      padding: 20px;
-    }
-    .proyecto {
-      background: #1e293b;
-      margin: 10px;
-      padding: 15px;
-      border-radius: 10px;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Pxul RR | Portafolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #020617;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(2,6,23,0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* HEADER */
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #1e293b, #020617);
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.highlight {
+  color: #38bdf8;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* SECCIONES */
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  border-left: 4px solid #38bdf8;
+  padding-left: 10px;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: #1e293b;
+}
+
+/* SKILLS */
+.skills span {
+  display: inline-block;
+  background: #1e293b;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 8px;
+}
+
+/* BOTÓN WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* BOTÓN ARRIBA */
+.top {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #38bdf8;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>Tu Nombre</h1>
-  <p>Estudiante de Ingeniería de Sistemas</p>
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#sobre">Sobre mí</a>
+  <a href="#skills">Skills</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<header id="inicio">
+  <h1>Hola, soy <span class="highlight">Pxul RR</span></h1>
+  <p id="typing"></p>
+  <a class="btn" href="https://wa.me/51999999999">💬 Contáctame</a>
 </header>
 
-<section>
-  <h2>Sobre mí</h2>
-  <p>
-    Soy estudiante de 7mo ciclo apasionado por el desarrollo web y chatbots.
-  </p>
+<section id="sobre">
+  <h2>🚀 Sobre mí</h2>
+  <p>Estudiante de Ingeniería de Sistemas, enfocado en desarrollo web y chatbots para automatización de negocios.</p>
 </section>
 
-<section>
-  <h2>Proyectos</h2>
-
-  <div class="proyecto">
-    <h3>Bot de citas médicas</h3>
-    <p>Chatbot con Twilio y Firebase para agendar citas automáticamente.</p>
+<section id="skills">
+  <h2>🛠️ Tecnologías</h2>
+  <div class="skills">
+    <span>JavaScript</span>
+    <span>Python</span>
+    <span>Firebase</span>
+    <span>Twilio</span>
+    <span>HTML</span>
+    <span>CSS</span>
   </div>
-
 </section>
 
-<section>
-  <h2>Contacto</h2>
+<section id="proyectos">
+  <h2>💼 Proyectos</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Bot de citas médicas</h3>
+      <p>Automatización de reservas por WhatsApp.</p>
+    </div>
+    <div class="card">
+      <h3>Automatización n8n</h3>
+      <p>Flujos automáticos para negocios.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>📞 Contacto</h2>
   <p>Email: tucorreo@gmail.com</p>
-  <p>
-    <a href="#">LinkedIn</a>
-  </p>
 </section>
+
+<footer>
+  <p>© 2026 Pxul RR</p>
+</footer>
+
+<!-- BOTONES -->
+<a class="whatsapp" href="https://wa.me/51999999999">💬</a>
+<div class="top" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️</div>
+
+<script>
+// typing effect
+const text = "Desarrollador Web | Chatbots | Automatización";
+let i = 0;
+function typing() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 50);
+  }
+}
+typing();
+
+// scroll animation
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
