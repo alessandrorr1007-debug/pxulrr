@@ -126,6 +126,17 @@ h2 {
   box-shadow: 0 0 25px #38bdf8;
 }
 
+/* BOTÓN PROYECTO */
+.project-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
 /* SKILLS */
 .skills {
   text-align: center;
@@ -172,38 +183,23 @@ canvas {
 
 <nav>
 <a href="#inicio">Inicio</a>
-<a href="#servicios">Servicios</a>
 <a href="#tecnologias">Tecnologías</a>
 <a href="#proyectos">Proyectos</a>
 <a href="#contacto">Contacto</a>
 </nav>
 
 <header id="inicio">
-<h1>Hola, soy <span class="highlight">Pxul RR</span></h1>
+<h1>Hola, soy <span class="highlight">Paul Rodríguez</span></h1>
 <p id="typing"></p>
-<a class="btn" href="https://wa.me/51934204042">💬 Trabajemos juntos</a>
+<a class="btn" href="#proyectos">Ver proyectos</a>
 </header>
-
-<section id="servicios">
-<h2>💸 Servicios</h2>
-<div class="grid">
-<div class="card">
-<h3>Chatbots WhatsApp</h3>
-<p>Automatizo reservas y atención al cliente.</p>
-</div>
-<div class="card">
-<h3>Desarrollo Web</h3>
-<p>Creo páginas modernas para negocios.</p>
-</div>
-</div>
-</section>
 
 <section id="tecnologias">
 <h2>🛠️ Tecnologías</h2>
 <div class="skills">
 <span>JavaScript</span>
 <span>Python</span>
-<span>Firebase</span>
+<span>Supabase</span>
 <span>Twilio</span>
 <span>HTML</span>
 <span>CSS</span>
@@ -214,18 +210,28 @@ canvas {
 
 <section id="proyectos">
 <h2>🚀 Proyectos</h2>
+
 <div class="grid">
+
 <div class="card">
-<h3>Bot de citas médicas</h3>
-<p>Sistema automático con Twilio y Firebase.</p>
+<h3>Chatbot de citas médicas</h3>
+<p>Sistema automatizado de reservas vía WhatsApp con integración a base de datos.</p>
+<p><strong>Tecnologías:</strong> Twilio, Supabase, Node.js</p>
+<a class="project-btn" href="https://github.com/TU-USUARIO/TU-REPO" target="_blank">
+Ver proyecto
+</a>
 </div>
+
 </div>
+
 </section>
 
 <section id="contacto">
 <h2>📞 Contacto</h2>
 <p>Email: <a href="mailto:arodriguezr1020@gmail.com" style="color:#38bdf8;">
 arodriguezr1020@gmail.com</a></p>
+<p>WhatsApp: <a href="https://wa.me/51934204042" style="color:#38bdf8;">
++51 934 204 042</a></p>
 </section>
 
 <a class="whatsapp" href="https://wa.me/51934204042">💬</a>
@@ -238,7 +244,7 @@ document.addEventListener("mousemove", e => {
 });
 
 // typing
-let txt = "Desarrollador Web | Chatbots | Automatización";
+let txt = "Estudiante de Ingeniería de Sistemas | Desarrollo Web | Automatización";
 let i = 0;
 function type() {
   if(i < txt.length){
