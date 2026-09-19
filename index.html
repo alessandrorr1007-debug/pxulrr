@@ -1,308 +1,700 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Pxul RR | Portafolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  cursor: none;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-  background: #020617;
-  color: white;
-  overflow-x: hidden;
-}
-
-/* CURSOR */
-.cursor {
-  width: 15px;
-  height: 15px;
-  background: #38bdf8;
-  position: fixed;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-/* NAV */
-nav {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px;
-  background: rgba(2,6,23,0.7);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #38bdf8;
-}
-
-/* HEADER */
-header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle, #1e293b, #020617);
-  text-align: center;
-}
-
-h1 {
-  font-size: 3em;
-}
-
-.highlight {
-  color: #38bdf8;
-}
-
-/* BOTONES */
-.btn {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #38bdf8;
-  color: black;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  box-shadow: 0 0 20px #38bdf8;
-}
-
-/* SECCIONES */
-section {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: auto;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s;
-}
-
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-h2 {
-  border-left: 4px solid #38bdf8;
-  padding-left: 10px;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  gap: 20px;
-}
-
-/* CARDS */
-.card {
-  background: #0f172a;
-  padding: 20px;
-  border-radius: 15px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 0 25px #38bdf8;
-}
-
-/* BOTÓN PROYECTO */
-.project-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 15px;
-  background: #38bdf8;
-  color: black;
-  border-radius: 8px;
-  text-decoration: none;
-}
-
-/* SKILLS */
-.skills {
-  text-align: center;
-}
-
-.skills span {
-  display: inline-block;
-  background: #1e293b;
-  padding: 10px 15px;
-  margin: 8px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.skills span:hover {
-  background: #38bdf8;
-  color: black;
-}
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  padding: 15px;
-  border-radius: 50%;
-}
-
-/* PARTÍCULAS */
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Metadatos SEO y Redes Sociales -->
+  <title>Paul Rodríguez | Portafolio - Desarrollador Web & Móvil</title>
+  <meta name="description" content="Portafolio profesional de Paul Rodríguez (Pxul RR). Estudiante de Ingeniería de Sistemas, Desarrollador Web Full Stack, creador de Chatbots de WhatsApp y Apps Móviles.">
+  <meta name="keywords" content="Paul Rodríguez, Pxul RR, Portafolio, Desarrollador Web, Ingenieria de Sistemas, Supabase, JavaScript, Python, Android Studio, WhatsApp Chatbot">
+  <meta name="author" content="Paul Rodríguez">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Paul Rodríguez | Portafolio Profesional">
+  <meta property="og:description" content="Estudiante de Ingeniería de Sistemas, Desarrollador Web y Creador de Soluciones Tecnológicas.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Hoja de Estilos Principal -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<div class="cursor"></div>
-<canvas id="bg"></canvas>
+  <!-- Puntero / Cursor Personalizado -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
 
-<nav>
-<a href="#inicio">Inicio</a>
-<a href="#tecnologias">Tecnologías</a>
-<a href="#proyectos">Proyectos</a>
-<a href="#contacto">Contacto</a>
-</nav>
+  <!-- Canvas de Constelación de Partículas -->
+  <canvas id="bg-canvas"></canvas>
 
-<header id="inicio">
-<h1>Hola, soy <span class="highlight">Paul Rodríguez</span></h1>
-<p id="typing"></p>
-<a class="btn" href="#proyectos">Ver proyectos</a>
-</header>
+  <!-- ==========================================================================
+       BARRA DE NAVEGACIÓN
+       ========================================================================== -->
+  <header>
+    <nav class="navbar">
+      <a href="#inicio" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Pxul<span class="gradient-text">.dev</span><span class="logo-bracket"> /&gt;</span>
+      </a>
 
-<section id="tecnologias">
-<h2>🛠️ Tecnologías</h2>
-<div class="skills">
-<span>JavaScript</span>
-<span>Python</span>
-<span>Supabase</span>
-<span>MySQL</span>
-<span>Android Studio</span>
-<span>HTML</span>
-<span>CSS</span>
-<span>Git</span>
-</div>
-</section>
+      <ul class="nav-links">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
 
-<section id="proyectos">
-<h2>🚀 Proyectos</h2>
+      <div class="nav-actions">
+        <a href="#contacto" class="btn btn-primary btn-sm">Contáctame</a>
+        <button class="mobile-toggle" aria-label="Abrir menú de navegación">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-<div class="grid">
+  <!-- ==========================================================================
+       SECCIÓN HERO / INICIO
+       ========================================================================== -->
+  <main>
+    <section id="inicio" class="hero-section">
+      <div class="container hero-content">
+        
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Disponible para proyectos y oportunidades</span>
+        </div>
 
-<div class="card">
-<h3>Chatbot de citas médicas</h3>
-<p>Sistema automatizado de reservas vía WhatsApp con base de datos.</p>
-<p><strong>Tecnologías:</strong> JavaScript, Supabase</p>
-<a class="project-btn" href="#">
-Ver proyecto
-</a>
-</div>
+        <p class="hero-subtitle-prefix">Hola, mi nombre es</p>
+        <h1 class="hero-title">Paul <span class="gradient-text">Rodríguez</span></h1>
 
-<div class="card">
-<h3>Sistema de pizzería</h3>
-<p>Aplicación web para gestión de pedidos y menú.</p>
-<p><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-<a class="project-btn" href="#">
-Ver proyecto
-</a>
-</div>
+        <div class="hero-typewriter-box">
+          <span id="typing-text"></span><span class="typewriter-cursor">|</span>
+        </div>
 
-</div>
+        <p class="hero-description">
+          Estudiante apasionado de <strong>Ingeniería de Sistemas</strong> enfocado en construir software escalable,
+          aplicaciones web de alto impacto, automatizaciones inteligentes con <strong>chatbots</strong> y soluciones móviles nativas.
+        </p>
 
-</section>
+        <div class="hero-cta-group">
+          <a href="#proyectos" class="btn btn-primary">
+            <span>Ver Proyectos</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="https://wa.me/51934204042?text=Hola%20Paul,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <span>Escríbeme al WhatsApp</span>
+          </a>
+          <button class="btn btn-secondary copy-email-btn" title="Copiar correo">
+            <span>Copiar Correo</span>
+          </button>
+        </div>
 
-<section id="contacto">
-<h2>📞 Contacto</h2>
-<p>Email: <a href="mailto:arodriguezr1020@gmail.com" style="color:#38bdf8;">
-arodriguezr1020@gmail.com</a></p>
-<p>WhatsApp: <a href="https://wa.me/51934204042" style="color:#38bdf8;">
-+51 934 204 042</a></p>
-</section>
+        <!-- Redes Sociales Rápidas -->
+        <div class="social-links">
+          <a href="https://github.com/alessandrorr1007-debug" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub de Paul Rodríguez">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://wa.me/51934204042" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M12.031 0C5.394 0 0 5.394 0 12.031c0 2.122.553 4.191 1.603 6.012L.07 23.931l6.059-1.589a12.01 12.01 0 005.902 1.547h.005c6.632 0 12.026-5.394 12.026-12.031 0-3.214-1.252-6.236-3.525-8.509C18.267 1.252 15.245 0 12.031 0zm7.143 17.15c-.297.838-1.745 1.599-2.396 1.696-.65.097-1.463.136-2.361-.151-1.04-.334-2.378-1.037-4.108-2.585-2.181-1.954-3.593-4.37-3.92-4.93-.327-.56-.035-.863.245-1.143.253-.253.56-.65.84-.977.28-.328.373-.56.56-.934.186-.373.093-.7-.047-.98-.14-.28-1.213-2.923-1.662-4.004-.438-1.053-.884-.91-1.213-.926l-1.036-.019c-.355 0-.933.133-1.42.665-.487.532-1.865 1.823-1.865 4.444 0 2.621 1.91 5.154 2.176 5.513.266.36 3.754 5.733 9.096 8.038 1.27.548 2.26.876 3.034 1.121 1.275.405 2.435.348 3.354.211 1.025-.153 3.153-1.288 3.596-2.532.443-1.243.443-2.308.31-2.532-.133-.223-.493-.357-.79-.506z"/></svg>
+          </a>
+          <a href="mailto:arodriguezr1020@gmail.com" class="social-icon-btn" aria-label="Enviar Correo">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
 
-<a class="whatsapp" href="https://wa.me/51934204042">💬</a>
+        <!-- Indicadores Numéricos -->
+        <div class="quick-stats">
+          <div class="stat-item">
+            <span class="stat-number">+2 Años</span>
+            <span class="stat-label">En Formación & Código</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Compromiso & Calidad</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">Full Stack</span>
+            <span class="stat-label">Web & Móvil Nativo</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">Perú / Global</span>
+            <span class="stat-label">Disponibilidad Remota</span>
+          </div>
+        </div>
 
-<script>
-// cursor
-document.addEventListener("mousemove", e => {
-  document.querySelector(".cursor").style.transform =
-    `translate(${e.clientX}px, ${e.clientY}px)`;
-});
+      </div>
+    </section>
 
-// typing
-let txt = "Estudiante de Ingeniería de Sistemas | Desarrollo Web | Aplicaciones móviles";
-let i = 0;
-function type() {
-  if(i < txt.length){
-    document.getElementById("typing").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(type, 50);
-  }
-}
-type();
+    <!-- ==========================================================================
+         SECCIÓN SOBRE MÍ
+         ========================================================================== -->
+    <section id="sobre-mi" class="fade-in-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 01. CONÓCEME</span>
+          <h2 class="section-title">Sobre <span class="gradient-text">Mí</span></h2>
+          <p class="section-subtitle">Pasión por la arquitectura de software y la resolución creativa de problemas</p>
+        </div>
 
-// scroll
-const sections = document.querySelectorAll("section");
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    if(sec.getBoundingClientRect().top < window.innerHeight - 100){
-      sec.classList.add("show");
-    }
-  });
-});
+        <div class="about-grid">
+          <!-- Terminal Interactiva -->
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot dot-red"></span>
+                <span class="terminal-dot dot-yellow"></span>
+                <span class="terminal-dot dot-green"></span>
+              </div>
+              <span class="terminal-title">paul_developer.json</span>
+            </div>
+            <pre class="terminal-body"><code>{
+  <span class="code-key">"desarrollador"</span>: <span class="code-str">"Paul Rodríguez"</span>,
+  <span class="code-key">"alias"</span>: <span class="code-str">"Pxul RR"</span>,
+  <span class="code-key">"carrera"</span>: <span class="code-str">"Ingeniería de Sistemas"</span>,
+  <span class="code-key">"ubicacion"</span>: <span class="code-str">"Lima, Perú"</span>,
+  <span class="code-key">"especialidades"</span>: [
+    <span class="code-str">"Desarrollo Web Moderno"</span>,
+    <span class="code-str">"Chatbots WhatsApp Automatizados"</span>,
+    <span class="code-str">"Bases de Datos Relacionales & NoSQL"</span>,
+    <span class="code-str">"Aplicaciones Móviles Android"</span>
+  ],
+  <span class="code-key">"tecnologiasClave"</span>: [
+    <span class="code-str">"JavaScript"</span>, <span class="code-str">"Python"</span>, <span class="code-str">"Supabase"</span>,
+    <span class="code-str">"MySQL"</span>, <span class="code-str">"Android Studio"</span>, <span class="code-str">"Git"</span>
+  ],
+  <span class="code-key">"listoParaNuevosRetos"</span>: <span class="code-bool">true</span>
+}</code></pre>
+          </div>
 
-// partículas
-const canvas = document.getElementById("bg");
-const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+          <!-- Descripción y Pilares -->
+          <div class="about-text">
+            <h3>Transformando ideas en soluciones digitales eficientes</h3>
+            <p>
+              Soy estudiante de <strong>Ingeniería de Sistemas</strong> con un enfoque práctico y orientado a resultados. Me entusiasma diseñar y construir aplicaciones que no solo luzcan profesionales, sino que funcionen de manera fluida, segura y escalable.
+            </p>
+            <p>
+              Cuento con experiencia integrando <strong>chatbots con WhatsApp API</strong> conectados a bases de datos en tiempo real como <strong>Supabase</strong>, permitiendo a negocios y profesionales automatizar reservas y optimizar tiempos. Asimismo, desarrollo plataformas web completas y aplicaciones en <strong>Android Studio</strong>.
+            </p>
 
-let particles = [];
-for(let i=0;i<100;i++){
-  particles.push({
-    x: Math.random()*canvas.width,
-    y: Math.random()*canvas.height,
-    r: Math.random()*2
-  });
-}
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">⚡</span>
+                <div>
+                  <h4>Código Limpio</h4>
+                  <span>Estructura clara y mantenible</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🛡️</span>
+                <div>
+                  <h4>Bases de Datos</h4>
+                  <span>Modelado y consultas optimizadas</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🤖</span>
+                <div>
+                  <h4>Automatización</h4>
+                  <span>Bots y flujos de trabajo 24/7</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">📱</span>
+                <div>
+                  <h4>Multiplataforma</h4>
+                  <span>Diseño web responsivo y móvil</span>
+                </div>
+              </div>
+            </div>
 
-function draw(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  particles.forEach(p=>{
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle="#38bdf8";
-    ctx.fill();
-    p.y += 0.3;
-    if(p.y > canvas.height) p.y = 0;
-  });
-  requestAnimationFrame(draw);
-}
-draw();
-</script>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ==========================================================================
+         SECCIÓN HABILIDADES (SKILLS)
+         ========================================================================== -->
+    <section id="habilidades" class="fade-in-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 02. STACK TECNOLÓGICO</span>
+          <h2 class="section-title">Habilidades & <span class="gradient-text">Herramientas</span></h2>
+          <p class="section-subtitle">Tecnologías con las que construyo soluciones robustas día a día</p>
+        </div>
+
+        <div class="skills-container">
+
+          <!-- Categoría 1: Frontend & UI -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">🎨</div>
+              <div>
+                <h3>Frontend & UI</h3>
+                <span class="mono-tag">Interfaces Responsivas</span>
+              </div>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-chip">
+                <!-- JavaScript -->
+                <svg viewBox="0 0 24 24"><path fill="#F7DF1E" d="M0 0h24v24H0z"/><path d="M5.4 18.5c.3.5.7.9 1.4.9.8 0 1.3-.4 1.3-1.3v-6.9h1.7v7c0 1.7-1 2.5-2.7 2.5-1.5 0-2.3-.7-2.8-1.8l1.1-.4zm7.3 2.1c-.8 0-1.4-.4-1.7-.9l1.1-.6c.3.4.6.6 1 .6.5 0 .8-.2.8-.5 0-.4-.3-.5-1.1-.9-.9-.4-1.6-.9-1.6-1.9 0-1.1.9-1.9 2.2-1.9 1 0 1.6.4 2 .9l-1 .7c-.2-.3-.5-.5-.9-.5-.5 0-.7.2-.7.5 0 .3.2.4 1 .8 1.1.4 1.7.9 1.7 2 0 1.3-1.1 2.2-2.5 2.2z"/></svg>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-chip">
+                <!-- HTML5 -->
+                <svg viewBox="0 0 24 24"><path fill="#E34F26" d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0z"/><path fill="#EF652A" d="M12 22l7.1-2.3L20.6 2H12v20z"/><path fill="#FFF" d="M12 9.5H8.2l-.2-2.7h8l-.3-2.7H5.2l.8 8.1H12V9.5zm0 6.6l-3.6-1-.2-2.6H5.7l.4 4.5 5.9 1.6V16.1zm0-3.6h4.5l-.4 4.6-4.1 1.1v2.7l6.8-1.9.9-9.2H12v2.7z"/></svg>
+                <span>HTML5</span>
+              </div>
+              <div class="skill-chip">
+                <!-- CSS3 -->
+                <svg viewBox="0 0 24 24"><path fill="#1572B6" d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0z"/><path fill="#33A9DC" d="M12 22l7.1-2.3L20.6 2H12v20z"/><path fill="#FFF" d="M12 4.6v2.7h4.8l-.3 2.7H12v2.7h4.2l-.4 4.6-3.8 1v2.7l6.5-1.8.8-9.2H12V4.6zm-6.8 0l.3 2.7H12V4.6H5.2zm.5 5.4l.3 2.7H12v-2.7H5.7zm.6 5.4l.2 2.6 5.5 1.5v-2.7l-3.3-.9-.2-2.1H6.3v1.6z"/></svg>
+                <span>CSS3 Moderno</span>
+              </div>
+              <div class="skill-chip">
+                <!-- Responsive Design -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span>Responsive</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoría 2: Backend & Bases de Datos -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">⚙️</div>
+              <div>
+                <h3>Backend & Bases de Datos</h3>
+                <span class="mono-tag">Lógica, Nube y Persistencia</span>
+              </div>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-chip">
+                <!-- Python -->
+                <svg viewBox="0 0 24 24"><path fill="#3776AB" d="M11.9 0c-3.1 0-5 1.3-5 3.7v2.7h5.1v.7H4.8C2.2 7.1 0 9.1 0 11.9c0 2.9 1.9 4.7 4.8 4.7h1.6v-2.2c0-1.8 1.5-3.3 3.3-3.3h5.1c1.5 0 2.7-1.2 2.7-2.7V3.7c0-2.4-2.1-3.7-5.6-3.7zm-2.4 1.7c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1z"/><path fill="#FFD438" d="M12.1 24c3.1 0 5-1.3 5-3.7v-2.7H12v-.7h7.2c2.6 0 4.8-2 4.8-4.8 0-2.9-1.9-4.7-4.8-4.7h-1.6v2.2c0 1.8-1.5 3.3-3.3 3.3H9.2c-1.5 0-2.7 1.2-2.7 2.7v4.7c0 2.4 2.1 3.7 5.6 3.7zm2.4-1.7c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/></svg>
+                <span>Python</span>
+              </div>
+              <div class="skill-chip">
+                <!-- Supabase -->
+                <svg viewBox="0 0 24 24"><path fill="#3ECF8E" d="M21.362 9.354H12V.396a.396.396 0 0 0-.716-.233L.61 13.91a.792.792 0 0 0 .616 1.272H12v8.422a.396.396 0 0 0 .716.233l10.674-13.746a.792.792 0 0 0-.616-1.272z"/></svg>
+                <span>Supabase</span>
+              </div>
+              <div class="skill-chip">
+                <!-- MySQL -->
+                <svg viewBox="0 0 24 24"><path fill="#00758F" d="M16.5 7.4c-.6-.7-1.5-1.1-2.6-1.1-2.1 0-3.6 1.5-3.6 3.7 0 2.2 1.5 3.7 3.6 3.7 1.1 0 2-.4 2.6-1.1l1.4 1.3c-.9 1.1-2.3 1.7-4 1.7-3.2 0-5.6-2.3-5.6-5.6s2.4-5.6 5.6-5.6c1.7 0 3.1.6 4 1.7l-1.4 1.3z"/><path fill="#F29111" d="M22.5 12c0 5.8-4.7 10.5-10.5 10.5S1.5 17.8 1.5 12 6.2 1.5 12 1.5 22.5 6.2 22.5 12z" fill-opacity=".1"/></svg>
+                <span>MySQL</span>
+              </div>
+              <div class="skill-chip">
+                <!-- REST APIs -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoría 3: Móvil & Herramientas -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">📱</div>
+              <div>
+                <h3>Móvil & Herramientas</h3>
+                <span class="mono-tag">Desarrollo y Control de Versiones</span>
+              </div>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-chip">
+                <!-- Android Studio -->
+                <svg viewBox="0 0 24 24"><path fill="#3DDC84" d="M17.5 8.3l1.8-3.1c.2-.3.1-.7-.2-.9-.3-.2-.7-.1-.9.2l-1.9 3.2C14.8 7.2 13.4 7 12 7c-1.4 0-2.8.2-4.3.7L5.8 4.5c-.2-.3-.6-.4-.9-.2-.3.2-.4.6-.2.9l1.8 3.1C3.8 10 2 12.8 2 16h20c0-3.2-1.8-6-4.5-7.7zM7.5 13c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm9 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/></svg>
+                <span>Android Studio</span>
+              </div>
+              <div class="skill-chip">
+                <!-- Git -->
+                <svg viewBox="0 0 24 24"><path fill="#F05032" d="M23.5 11.2l-10.7-10.7c-.7-.7-1.8-.7-2.5 0L8.7 2.1l3.2 3.2c.8-.3 1.7-.1 2.3.5.6.6.8 1.5.5 2.3l3.1 3.1c.8-.3 1.7-.1 2.3.5.8.8.8 2.2 0 3-.8.8-2.2.8-3 0-.6-.6-.8-1.5-.5-2.3l-2.9-2.9v6.5c.2.2.4.4.5.6.8.8.8 2.2 0 3-.8.8-2.2.8-3 0-.8-.8-.8-2.2 0-3 .2-.2.4-.4.6-.5V8.5c-.2-.1-.4-.3-.6-.5-.6-.6-.8-1.5-.5-2.3L4.7 9.8c-.7.7-.7 1.8 0 2.5l10.7 10.7c.7.7 1.8.7 2.5 0l5.6-5.6c.7-.7.7-1.8 0-2.5z"/></svg>
+                <span>Git</span>
+              </div>
+              <div class="skill-chip">
+                <!-- GitHub -->
+                <svg viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </div>
+              <div class="skill-chip">
+                <!-- WhatsApp API -->
+                <svg viewBox="0 0 24 24"><path fill="#25D366" d="M12.031 0C5.394 0 0 5.394 0 12.031c0 2.122.553 4.191 1.603 6.012L.07 23.931l6.059-1.589a12.01 12.01 0 005.902 1.547h.005c6.632 0 12.026-5.394 12.026-12.031 0-3.214-1.252-6.236-3.525-8.509C18.267 1.252 15.245 0 12.031 0zm7.143 17.15c-.297.838-1.745 1.599-2.396 1.696-.65.097-1.463.136-2.361-.151-1.04-.334-2.378-1.037-4.108-2.585-2.181-1.954-3.593-4.37-3.92-4.93-.327-.56-.035-.863.245-1.143.253-.253.56-.65.84-.977.28-.328.373-.56.56-.934.186-.373.093-.7-.047-.98-.14-.28-1.213-2.923-1.662-4.004-.438-1.053-.884-.91-1.213-.926l-1.036-.019c-.355 0-.933.133-1.42.665-.487.532-1.865 1.823-1.865 4.444 0 2.621 1.91 5.154 2.176 5.513.266.36 3.754 5.733 9.096 8.038 1.27.548 2.26.876 3.034 1.121 1.275.405 2.435.348 3.354.211 1.025-.153 3.153-1.288 3.596-2.532.443-1.243.443-2.308.31-2.532-.133-.223-.493-.357-.79-.506z"/></svg>
+                <span>WhatsApp Bot</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN PROYECTOS DESTACADOS
+         ========================================================================== -->
+    <section id="proyectos" class="fade-in-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 03. CASOS DE ÉXITO</span>
+          <h2 class="section-title">Proyectos <span class="gradient-text">Destacados</span></h2>
+          <p class="section-subtitle">Una selección de desarrollos que combinan lógica, funcionalidad y diseño</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Proyecto 1: Chatbot Médico WhatsApp -->
+          <article class="project-card">
+            <div class="project-preview">
+              <span class="project-status-badge">🟢 Destacado</span>
+              <div class="project-preview-mockup">
+                <div class="mockup-bar">
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span>whatsapp_bot.js</span>
+                </div>
+                <div class="mockup-content">
+                  🤖 💬 🩺
+                </div>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <h3>Chatbot de Citas Médicas</h3>
+              <p>
+                Sistema inteligente y automatizado de reservas médicas vía WhatsApp. Permite a los pacientes consultar disponibilidad de especialistas en tiempo real, confirmar citas y recibir recordatorios automáticos sincronizados con base de datos en la nube.
+              </p>
+
+              <div class="project-tech-list">
+                <span class="project-tech-tag">JavaScript</span>
+                <span class="project-tech-tag">Supabase</span>
+                <span class="project-tech-tag">WhatsApp Cloud API</span>
+                <span class="project-tech-tag">PostgreSQL</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/alessandrorr1007-debug" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <span>Ver en GitHub</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#contacto" class="project-link-btn outline">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2: Sistema de Pizzería Web -->
+          <article class="project-card">
+            <div class="project-preview">
+              <span class="project-status-badge">🍕 E-Commerce</span>
+              <div class="project-preview-mockup">
+                <div class="mockup-bar">
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span>pizzeria_order.html</span>
+                </div>
+                <div class="mockup-content">
+                  🍕 🛒 💳
+                </div>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <h3>Sistema Web para Pizzería</h3>
+              <p>
+                Plataforma web dinámica para pedidos gastronómicos en línea. Incluye catálogo interactivo con personalización de ingredientes, cálculo de totales en tiempo real con carrito de compras y panel de confirmación rápida de órdenes.
+              </p>
+
+              <div class="project-tech-list">
+                <span class="project-tech-tag">HTML5</span>
+                <span class="project-tech-tag">CSS3</span>
+                <span class="project-tech-tag">JavaScript ES6+</span>
+                <span class="project-tech-tag">UI/UX</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/alessandrorr1007-debug" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <span>Ver en GitHub</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#contacto" class="project-link-btn outline">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3: App Móvil de Gestión (Android) -->
+          <article class="project-card">
+            <div class="project-preview">
+              <span class="project-status-badge">📱 Android Nativo</span>
+              <div class="project-preview-mockup">
+                <div class="mockup-bar">
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span>MainActivity.java</span>
+                </div>
+                <div class="mockup-content">
+                  📱 📊 ⚡
+                </div>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <h3>App Móvil de Gestión & Registro</h3>
+              <p>
+                Aplicación nativa para dispositivos Android desarrollada en Android Studio. Incorpora manejo de bases de datos locales con SQLite para funcionamiento offline, validación de formularios y arquitectura orientada a la experiencia de usuario.
+              </p>
+
+              <div class="project-tech-list">
+                <span class="project-tech-tag">Android Studio</span>
+                <span class="project-tech-tag">Java / Kotlin</span>
+                <span class="project-tech-tag">SQLite</span>
+                <span class="project-tech-tag">Material Design</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/alessandrorr1007-debug" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <span>Ver en GitHub</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#contacto" class="project-link-btn outline">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 4: Portafolio Personal v2.0 -->
+          <article class="project-card">
+            <div class="project-preview">
+              <span class="project-status-badge">⚡ Alto Rendimiento</span>
+              <div class="project-preview-mockup">
+                <div class="mockup-bar">
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span>portfolio_v2.css</span>
+                </div>
+                <div class="mockup-content">
+                  💻 🌌 ✨
+                </div>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <h3>Portafolio Web Interactivo v2.0</h3>
+              <p>
+                Sitio web profesional con diseño Cyber-Dark y efecto Glassmorphism. Implementa un motor de partículas con Canvas API, cursor dinámico, animaciones fluidas, formulario interactivo y diseño 100% responsivo para todos los dispositivos.
+              </p>
+
+              <div class="project-tech-list">
+                <span class="project-tech-tag">HTML5 Semántico</span>
+                <span class="project-tech-tag">CSS3 Variables</span>
+                <span class="project-tech-tag">Canvas API</span>
+                <span class="project-tech-tag">JavaScript Vanilla</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/alessandrorr1007-debug/pxulrr" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">
+                  <span>Repositorio</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#inicio" class="project-link-btn outline">Ver Arriba</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN SERVICIOS / QUÉ OFREZCO
+         ========================================================================== -->
+    <section id="servicios" class="fade-in-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 04. PROPUESTA DE VALOR</span>
+          <h2 class="section-title">¿Qué Puedo <span class="gradient-text">Hacer por Ti?</span></h2>
+          <p class="section-subtitle">Soluciones adaptadas a las necesidades reales de tu negocio o proyecto</p>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card">
+            <div class="service-icon-wrapper">💻</div>
+            <h3>Desarrollo Web a Medida</h3>
+            <p>
+              Diseño y desarrollo de sitios web modernos, veloces y optimizados para dispositivos móviles. Enfoque en código limpio, alta conversión y experiencia de usuario atractiva.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-wrapper">🤖</div>
+            <h3>Chatbots & Automatización</h3>
+            <p>
+              Creación de bots interactivos para WhatsApp Business API con integración a bases de datos. Automatiza reservas, consultas frecuentes y atención al cliente las 24 horas del día.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-wrapper">🗄️</div>
+            <h3>Bases de Datos & Backend</h3>
+            <p>
+              Estructuración y optimización de bases de datos relacionales con Supabase y MySQL. Creación de endpoints y servicios seguros para conectar tus aplicaciones.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-wrapper">📱</div>
+            <h3>Aplicaciones Android</h3>
+            <p>
+              Desarrollo de aplicaciones nativas en Android Studio orientadas a la resolución de tareas específicas, con almacenamiento local y diseño adaptable.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN CONTACTO
+         ========================================================================== -->
+    <section id="contacto" class="fade-in-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 05. VÍAS DE COMUNICACIÓN</span>
+          <h2 class="section-title">Ponte en <span class="gradient-text">Contacto</span></h2>
+          <p class="section-subtitle">¿Tienes una idea, un proyecto o una oportunidad laboral? ¡Hablemos!</p>
+        </div>
+
+        <div class="contact-wrapper">
+
+          <!-- Tarjetas de Información de Contacto Directo -->
+          <div class="contact-info-cards">
+
+            <div class="contact-card">
+              <div class="contact-card-icon">✉️</div>
+              <div class="contact-card-content">
+                <h4>Correo Electrónico</h4>
+                <a href="mailto:arodriguezr1020@gmail.com">arodriguezr1020@gmail.com</a>
+              </div>
+              <button class="copy-btn copy-email-btn" title="Copiar correo">
+                <span>Copiar</span>
+              </button>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-icon">💬</div>
+              <div class="contact-card-content">
+                <h4>WhatsApp Directo</h4>
+                <a href="https://wa.me/51934204042?text=Hola%20Paul,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto" target="_blank" rel="noopener noreferrer">+51 934 204 042</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-icon">🐙</div>
+              <div class="contact-card-content">
+                <h4>Perfil en GitHub</h4>
+                <a href="https://github.com/alessandrorr1007-debug" target="_blank" rel="noopener noreferrer">github.com/alessandrorr1007-debug</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-icon">📍</div>
+              <div class="contact-card-content">
+                <h4>Ubicación</h4>
+                <p>Lima, Perú · Trabajo Remoto Disponible</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Formulario de Contacto Funcional -->
+          <div class="contact-form-container">
+            <h3>Envíame un Mensaje</h3>
+            <p>Responderé a tu consulta a la mayor brevedad posible.</p>
+
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name" class="form-label">Tu Nombre *</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Ej. Carlos Mendoza" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Tu Correo Electrónico *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="nombre@correo.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">¿En qué puedo ayudarte? *</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Cuéntame sobre tu proyecto, consulta o propuesta..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Enviar Mensaje</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+
+              <div id="form-feedback" class="form-feedback"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <a href="#inicio" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>Pxul<span class="gradient-text">.dev</span><span class="logo-bracket"> /&gt;</span>
+          </a>
+          <p>Estudiante de Ingeniería de Sistemas · Desarrollador Web & Móvil</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#sobre-mi">Sobre Mí</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Paul Rodríguez (Pxul RR). Desarrollado con código limpio y alto rendimiento.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       BOTÓN FLOTANTE WHATSAPP & TOAST
+       ========================================================================== -->
+  <a href="https://wa.me/51934204042?text=Hola%20Paul,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-whatsapp" 
+     aria-label="Contactar por WhatsApp">
+    <span class="whatsapp-tooltip">¿Conversamos por WhatsApp?</span>
+    <svg viewBox="0 0 24 24"><path d="M12.031 0C5.394 0 0 5.394 0 12.031c0 2.122.553 4.191 1.603 6.012L.07 23.931l6.059-1.589a12.01 12.01 0 005.902 1.547h.005c6.632 0 12.026-5.394 12.026-12.031 0-3.214-1.252-6.236-3.525-8.509C18.267 1.252 15.245 0 12.031 0zm7.143 17.15c-.297.838-1.745 1.599-2.396 1.696-.65.097-1.463.136-2.361-.151-1.04-.334-2.378-1.037-4.108-2.585-2.181-1.954-3.593-4.37-3.92-4.93-.327-.56-.035-.863.245-1.143.253-.253.56-.65.84-.977.28-.328.373-.56.56-.934.186-.373.093-.7-.047-.98-.14-.28-1.213-2.923-1.662-4.004-.438-1.053-.884-.91-1.213-.926l-1.036-.019c-.355 0-.933.133-1.42.665-.487.532-1.865 1.823-1.865 4.444 0 2.621 1.91 5.154 2.176 5.513.266.36 3.754 5.733 9.096 8.038 1.27.548 2.26.876 3.034 1.121 1.275.405 2.435.348 3.354.211 1.025-.153 3.153-1.288 3.596-2.532.443-1.243.443-2.308.31-2.532-.133-.223-.493-.357-.79-.506z"/></svg>
+  </a>
+
+  <!-- Contenedor Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Script Principal -->
+  <script src="js/main.js"></script>
 </body>
 </html>
