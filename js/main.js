@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCopyEmail();
   initContactForm();
   initScrollReveal();
+  initProjectModals();
+  initCvModal();
 });
 
 /* ==========================================================================
@@ -312,14 +314,14 @@ function showToast(message) {
 }
 
 /* ==========================================================================
-   7. FORMULARIO DE CONTACTO INTERACTIVO
+   7. FORMULARIO DE CONTACTO DIRECTO AL CORREO (FORMSUBMIT API)
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const feedback = document.getElementById('form-feedback');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = document.getElementById('name').value.trim();
@@ -331,29 +333,64 @@ function initContactForm() {
       return;
     }
 
-    // Feedback visual inmediato
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<span>Enviando...</span>';
+    submitBtn.innerHTML = '<span>Enviando mensaje a Paul...</span>';
     submitBtn.disabled = true;
 
-    setTimeout(() => {
+    try {
+      // Envío directo a tu correo arodriguezr1020@gmail.com vía FormSubmit API
+      const response = await fetch('https://formsubmit.co/ajax/arodriguezr1020@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Nombre: name,
+          Correo: email,
+          Mensaje: message,
+          _subject: `Nuevo mensaje de ${name} desde tu Portafolio Web`,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+
+      const data = await response.json();
+
       submitBtn.innerHTML = originalText;
       submitBtn.disabled = false;
-      form.reset();
+
+      if (response.ok) {
+        form.reset();
+        if (feedback) {
+          feedback.className = 'form-feedback success';
+          feedback.innerHTML = `<strong>¡Muchas gracias, ${name}!</strong> Tu mensaje ha sido enviado directamente a mi correo electrónico (<code>arodriguezr1020@gmail.com</code>). Te responderé a la brevedad.`;
+          feedback.style.display = 'block';
+
+          setTimeout(() => {
+            feedback.style.display = 'none';
+          }, 9000);
+        }
+        showToast('✓ Mensaje enviado exitosamente a mi correo');
+      } else {
+        throw new Error(data.message || 'Error en el envío');
+      }
+    } catch (err) {
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+
+      // Fallback: abrir cliente de correo directamente si la red o adblocker bloquea el fetch
+      const mailtoUrl = `mailto:arodriguezr1020@gmail.com?subject=${encodeURIComponent(`Contacto desde Portafolio - ${name}`)}&body=${encodeURIComponent(`Hola Paul,\n\nMi nombre es: ${name}\nMi correo: ${email}\n\nMensaje:\n${message}`)}`;
+      window.location.href = mailtoUrl;
 
       if (feedback) {
         feedback.className = 'form-feedback success';
-        feedback.innerHTML = `<strong>¡Muchas gracias, ${name}!</strong> Tu mensaje ha sido procesado. Te responderé al correo <code>${email}</code> lo más pronto posible.`;
+        feedback.innerHTML = `<strong>Abriendo tu correo...</strong> Si no se abrió automáticamente, puedes escribirme directamente a: <a href="${mailtoUrl}" style="color: var(--primary); font-weight: bold;">arodriguezr1020@gmail.com</a>`;
         feedback.style.display = 'block';
-
-        setTimeout(() => {
-          feedback.style.display = 'none';
-        }, 7000);
       }
-
-      showToast('✓ Mensaje enviado con éxito');
-    }, 1000);
+      showToast('✉ Abriendo cliente de correo...');
+    }
   });
 }
 
@@ -376,3 +413,68 @@ function initScrollReveal() {
 
   revealElements.forEach(el => observer.observe(el));
 }
+
+/* ==========================================================================
+   9. MODALES NATIVOS (<dialog>) CON LIGHT DISMISS Y ACCESIBILIDAD
+   ========================================================================== */
+function initProjectModals() {
+  const openButtons = document.querySelectorAll('.open-modal-btn');
+  const dialogs = document.querySelectorAll('dialog.project-modal');
+
+  openButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modalId = btn.getAttribute('data-modal');
+      const dialog = document.getElementById(modalId);
+      if (dialog && typeof dialog.showModal === 'function') {
+        dialog.showModal();
+      }
+    });
+  });
+
+  dialogs.forEach(dialog => {
+    // Botones de cierre dentro del modal
+    const closeBtns = dialog.querySelectorAll('.modal-close-btn');
+    closeBtns.forEach(closeBtn => {
+      closeBtn.addEventListener('click', () => dialog.close());
+    });
+
+    // Fallback de light-dismiss para navegadores que aún no soportan closedby
+    if (!('closedBy' in HTMLDialogElement.prototype)) {
+      dialog.addEventListener('click', (event) => {
+        if (event.target !== dialog) return;
+
+        const rect = dialog.getBoundingClientRect();
+        const isDialogContent = (
+          rect.top <= event.clientY &&
+          event.clientY <= rect.top + rect.height &&
+          rect.left <= event.clientX &&
+          event.clientX <= rect.left + rect.width
+        );
+
+        if (!isDialogContent) {
+          dialog.close();
+        }
+      });
+    }
+  });
+}
+
+/* ==========================================================================
+   10. MODAL DE CURRÍCULUM VITAE (CV INTERACTIVO)
+   ========================================================================== */
+function initCvModal() {
+  const cvButtons = document.querySelectorAll('.open-cv-btn');
+  const cvDialog = document.getElementById('modal-cv');
+  if (!cvDialog) return;
+
+  cvButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (typeof cvDialog.showModal === 'function') {
+        cvDialog.showModal();
+      }
+    });
+  });
+}
+
