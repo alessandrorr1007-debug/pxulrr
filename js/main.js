@@ -354,6 +354,7 @@ function initContactForm() {
           Nombre: name,
           email: email,
           _replyto: email,
+          _url: 'https://alessandrorr1007-debug.github.io/pxulrr/',
           Mensaje: message,
           _subject: `Nuevo mensaje de ${name} desde tu Portafolio Web`,
           _template: 'table',
@@ -389,7 +390,21 @@ function initContactForm() {
       const mailtoUrl = `mailto:arodriguezr1020@gmail.com?subject=${encodeURIComponent(`Contacto desde Portafolio - ${name}`)}&body=${encodeURIComponent(`Hola Paul,\n\nMi nombre es: ${name}\nMi correo: ${email}\n\nMensaje:\n${message}`)}`;
       if (feedback) {
         feedback.className = 'form-feedback error';
-        feedback.textContent = 'No pudimos confirmar el envío. Puedes reintentar o ';
+        feedback.textContent = 'No pudimos confirmar el envío. ';
+        if (err instanceof Error && err.message && err.message !== 'Failed to fetch') {
+          const reason = document.createElement('p');
+          reason.textContent = `Respuesta del servicio: ${err.message}`;
+          feedback.append(reason);
+        }
+        const directButton = document.createElement('button');
+        directButton.type = 'button';
+        directButton.className = 'project-link-btn outline';
+        directButton.textContent = 'Continuar con envío directo';
+        directButton.addEventListener('click', () => {
+          if (form.reportValidity()) HTMLFormElement.prototype.submit.call(form);
+        });
+        feedback.append(directButton, document.createElement('br'));
+        feedback.append('También puedes ');
         const emailLink = document.createElement('a');
         emailLink.href = mailtoUrl;
         emailLink.textContent = 'enviar el mensaje desde tu aplicación de correo';
