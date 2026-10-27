@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTypewriter();
   initNavbar();
   initScrollSpy();
+  initCustomCursor();
   initCopyEmail();
   initContactForm();
   initScrollReveal();
@@ -471,3 +472,20 @@ function initCvModal() {
   });
 }
 
+
+function initCustomCursor() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  const arrow = document.getElementById('custom-cursor-arrow');
+  if (!arrow) return;
+  const hide = () => document.documentElement.classList.remove('custom-cursor-active');
+  document.addEventListener('pointermove', (event) => {
+    if (event.pointerType !== 'mouse') return;
+    const host = document.querySelector('dialog[open]') || document.body;
+    if (arrow.parentElement !== host) host.append(arrow);
+    arrow.style.transform = `translate(${event.clientX - 2}px, ${event.clientY - 2}px)`;
+    document.documentElement.classList.add('custom-cursor-active');
+  });
+  document.documentElement.addEventListener('pointerleave', hide);
+  window.addEventListener('blur', hide);
+  document.addEventListener('close', hide, true);
+}
