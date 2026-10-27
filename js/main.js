@@ -256,34 +256,10 @@ function initCustomCursor() {
   if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
 
   const dot = document.querySelector('.custom-cursor-dot');
-  const ring = document.querySelector('.custom-cursor-ring');
-  if (!dot || !ring) return;
-
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-  let ringX = mouseX;
-  let ringY = mouseY;
+  if (!dot) return;
 
   window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-  });
-
-  // Animación interpolada para el aro exterior
-  function renderCursor() {
-    ringX += (mouseX - ringX) * 0.18;
-    ringY += (mouseY - ringY) * 0.18;
-    ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
-    requestAnimationFrame(renderCursor);
-  }
-  renderCursor();
-
-  // Detección de elementos clickeables para agrandar el cursor
-  const interactives = document.querySelectorAll('a, button, input, textarea, .clickable, .project-card, .skill-category-card, .service-card');
-  interactives.forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
   });
 }
 
