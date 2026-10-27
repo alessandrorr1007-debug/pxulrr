@@ -139,7 +139,7 @@ function initTypewriter() {
   if (!element) return;
 
   const roles = [
-    'Estudiante de Ingeniería de Sistemas',
+    'Estudiante de Ingeniería de Sistemas e Inteligencia Artificial',
     'Desarrollador Web Full Stack',
     'Creador de Chatbots & Automatizaciones',
     'Desarrollador Móvil Android',
