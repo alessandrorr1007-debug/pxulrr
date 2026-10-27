@@ -346,7 +346,7 @@ function initContactForm() {
 
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<span>Enviando mensaje a Alejandro...</span>';
+    submitBtn.innerHTML = '<span>Enviando mensaje a Alessandro...</span>';
     submitBtn.disabled = true;
 
     try {
@@ -394,7 +394,7 @@ function initContactForm() {
       submitBtn.disabled = false;
 
       // Conserva los campos para reintentar y ofrece una alternativa explícita.
-      const mailtoUrl = `mailto:arodriguezr1020@gmail.com?subject=${encodeURIComponent(`Contacto desde Portafolio - ${name}`)}&body=${encodeURIComponent(`Hola Alejandro,\n\nMi nombre es: ${name}\nMi correo: ${email}\n\nMensaje:\n${message}`)}`;
+      const mailtoUrl = `mailto:arodriguezr1020@gmail.com?subject=${encodeURIComponent(`Contacto desde Portafolio - ${name}`)}&body=${encodeURIComponent(`Hola Alessandro,\n\nMi nombre es: ${name}\nMi correo: ${email}\n\nMensaje:\n${message}`)}`;
       if (feedback) {
         feedback.className = 'form-feedback error';
         feedback.textContent = 'No pudimos confirmar el envío. ';
