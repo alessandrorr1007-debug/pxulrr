@@ -324,6 +324,10 @@ function initContactForm() {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    if (!form.reportValidity()) return;
+    const submitButton = form.querySelector('button[type="submit"]');
+    if (submitButton.disabled) return;
+
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
@@ -348,7 +352,8 @@ function initContactForm() {
         },
         body: JSON.stringify({
           Nombre: name,
-          Correo: email,
+          email: email,
+          _replyto: email,
           Mensaje: message,
           _subject: `Nuevo mensaje de ${name} desde tu Portafolio Web`,
           _template: 'table',
@@ -361,11 +366,11 @@ function initContactForm() {
       submitBtn.innerHTML = originalText;
       submitBtn.disabled = false;
 
-      if (response.ok) {
+      if (response.ok && (data.success === true || data.success === 'true')) {
         form.reset();
         if (feedback) {
           feedback.className = 'form-feedback success';
-          feedback.innerHTML = `<strong>¡Muchas gracias, ${name}!</strong> Tu mensaje ha sido enviado directamente a mi correo electrónico (<code>arodriguezr1020@gmail.com</code>). Te responderé a la brevedad.`;
+          feedback.textContent = `¡Gracias, ${name}! Tu mensaje fue recibido por el servicio de envío. Te responderé al correo que indicaste.`;
           feedback.style.display = 'block';
 
           setTimeout(() => {
@@ -380,16 +385,18 @@ function initContactForm() {
       submitBtn.innerHTML = originalText;
       submitBtn.disabled = false;
 
-      // Fallback: abrir cliente de correo directamente si la red o adblocker bloquea el fetch
+      // Conserva los campos para reintentar y ofrece una alternativa explícita.
       const mailtoUrl = `mailto:arodriguezr1020@gmail.com?subject=${encodeURIComponent(`Contacto desde Portafolio - ${name}`)}&body=${encodeURIComponent(`Hola Paul,\n\nMi nombre es: ${name}\nMi correo: ${email}\n\nMensaje:\n${message}`)}`;
-      window.location.href = mailtoUrl;
-
       if (feedback) {
-        feedback.className = 'form-feedback success';
-        feedback.innerHTML = `<strong>Abriendo tu correo...</strong> Si no se abrió automáticamente, puedes escribirme directamente a: <a href="${mailtoUrl}" style="color: var(--primary); font-weight: bold;">arodriguezr1020@gmail.com</a>`;
+        feedback.className = 'form-feedback error';
+        feedback.textContent = 'No pudimos confirmar el envío. Puedes reintentar o ';
+        const emailLink = document.createElement('a');
+        emailLink.href = mailtoUrl;
+        emailLink.textContent = 'enviar el mensaje desde tu aplicación de correo';
+        feedback.append(emailLink);
         feedback.style.display = 'block';
       }
-      showToast('✉ Abriendo cliente de correo...');
+      showToast('No se confirmó el envío. Tu mensaje sigue en el formulario.');
     }
   });
 }
