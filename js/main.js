@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTypewriter();
   initNavbar();
   initScrollSpy();
+  initVisibleCursor();
   initCopyEmail();
   initContactForm();
   initScrollReveal();
@@ -471,4 +472,31 @@ function initCvModal() {
   });
 }
 
-
+function initVisibleCursor() {
+  const arrow = document.getElementById('cursor-arrow');
+  if (!arrow) return;
+  const root = document.documentElement;
+  let visible = false;
+  const hide = () => {
+    visible = false;
+    root.classList.remove('cursor-visible');
+  };
+  // Un único cambio de posición por evento, sin búsquedas del DOM ni interpolación.
+  document.addEventListener('pointermove', (event) => {
+    if (event.pointerType === 'touch') return;
+    arrow.style.transform = `translate3d(${event.clientX - 2}px, ${event.clientY - 2}px, 0)`;
+    if (!visible) {
+      root.classList.add('cursor-visible');
+      visible = true;
+    }
+  }, { passive: true });
+  document.documentElement.addEventListener('pointerleave', hide);
+  window.addEventListener('blur', hide);
+  // El diálogo está en una capa superior: la flecha debe pertenecer a esa capa.
+  document.querySelectorAll('dialog').forEach(dialog => {
+    new MutationObserver(() => {
+      if (dialog.open) dialog.append(arrow);
+      else if (arrow.parentElement === dialog) document.body.append(arrow);
+    }).observe(dialog, { attributes: true, attributeFilter: ['open'] });
+  });
+}

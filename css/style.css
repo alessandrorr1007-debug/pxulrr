@@ -84,12 +84,19 @@ body {
   pointer-events: none;
 }
 
-/* Cursor nativo: movimiento inmediato sin seguimiento por JavaScript. */
-@media (hover: hover) and (pointer: fine) {
-  html, body, body * {
-    cursor: url('../img/cursor-blue.cur') 2 2, default !important;
-  }
+/* Flecha renderizada en la página para navegadores sin cursor personalizado. */
+#cursor-arrow {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 2147483647;
+  will-change: transform;
+  contain: layout style paint;
 }
+html.cursor-visible #cursor-arrow { display: block; }
+html.cursor-visible, html.cursor-visible * { cursor: none !important; }
 
 /* Tipografía de Utilidad */
 .gradient-text {
@@ -1615,7 +1622,8 @@ dialog.modal-cv-dialog {
   .modal-header,
   .modal-footer,
   .modal-close-btn,
-  #bg-canvas {
+  #bg-canvas,
+  #cursor-arrow {
     display: none !important;
   }
   .cv-paper {
