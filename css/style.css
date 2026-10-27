@@ -84,21 +84,10 @@ body {
   pointer-events: none;
 }
 
-/* Flecha visible en la página, compatible con el navegador integrado. */
-#custom-cursor-arrow {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 2147483647;
-}
+/* Cursor nativo: movimiento inmediato sin seguimiento por JavaScript. */
 @media (hover: hover) and (pointer: fine) {
-  html.custom-cursor-active, html.custom-cursor-active * {
-    cursor: none !important;
-  }
-  html.custom-cursor-active #custom-cursor-arrow {
-    display: block;
+  html, body, body * {
+    cursor: url('../img/cursor-blue.cur') 2 2, default !important;
   }
 }
 
@@ -1626,8 +1615,7 @@ dialog.modal-cv-dialog {
   .modal-header,
   .modal-footer,
   .modal-close-btn,
-  #bg-canvas,
-  #custom-cursor-arrow {
+  #bg-canvas {
     display: none !important;
   }
   .cv-paper {
