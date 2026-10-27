@@ -142,7 +142,14 @@ function initTypewriter() {
     'Estudiante de Ingeniería de Sistemas',
     'Desarrollador Web Full Stack',
     'Creador de Chatbots & Automatizaciones',
-    'Desarrollador Móvil Android'
+    'Desarrollador Móvil Android',
+    'Creador de Catálogos Digitales',
+    'Desarrollador de Paneles de Gestión',
+    'Integración de APIs & Servicios',
+    'Bases de Datos & Backend',
+    'Planificadores & Herramientas de Cálculo',
+    'Aplicaciones Web Progresivas (PWA)',
+    'Publicación Web & Distribución de APKs'
   ];
 
   let roleIndex = 0;
@@ -339,7 +346,7 @@ function initContactForm() {
 
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<span>Enviando mensaje a Paul...</span>';
+    submitBtn.innerHTML = '<span>Enviando mensaje a Alejandro...</span>';
     submitBtn.disabled = true;
 
     try {
@@ -387,7 +394,7 @@ function initContactForm() {
       submitBtn.disabled = false;
 
       // Conserva los campos para reintentar y ofrece una alternativa explícita.
-      const mailtoUrl = `mailto:arodriguezr1020@gmail.com?subject=${encodeURIComponent(`Contacto desde Portafolio - ${name}`)}&body=${encodeURIComponent(`Hola Paul,\n\nMi nombre es: ${name}\nMi correo: ${email}\n\nMensaje:\n${message}`)}`;
+      const mailtoUrl = `mailto:arodriguezr1020@gmail.com?subject=${encodeURIComponent(`Contacto desde Portafolio - ${name}`)}&body=${encodeURIComponent(`Hola Alejandro,\n\nMi nombre es: ${name}\nMi correo: ${email}\n\nMensaje:\n${message}`)}`;
       if (feedback) {
         feedback.className = 'form-feedback error';
         feedback.textContent = 'No pudimos confirmar el envío. ';
