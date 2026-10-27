@@ -1545,6 +1545,18 @@ dialog.modal-cv-dialog {
   gap: 4px;
 }
 
+.cv-paper a {
+  color: #7dd3fc;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.cv-paper a:hover,
+.cv-paper a:focus-visible {
+  color: #e0f2fe;
+}
+
 .cv-section-title {
   font-size: 1.1rem;
   font-weight: 700;
@@ -1629,6 +1641,9 @@ dialog.modal-cv-dialog {
   }
   .cv-role, .cv-item-date {
     color: #0284c7 !important;
+  }
+  .cv-paper a {
+    color: #075985 !important;
   }
   .cv-item-desc, .cv-contact-items, .cv-item-sub {
     color: #334155 !important;
