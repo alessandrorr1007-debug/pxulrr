@@ -1595,10 +1595,46 @@ dialog.modal-cv-dialog {
   line-height: 1.5;
 }
 
+/* Presentación editorial del CV: documento claro dentro del visor oscuro. */
+dialog.modal-cv-dialog { max-width: 960px; }
+.modal-cv-dialog .modal-body { background: #111c30; padding: 28px; }
+.cv-paper { background: #f8fafc; color: #243247; border: 0; border-top: 6px solid #0284c7; border-radius: 4px; padding: 40px; box-shadow: 0 16px 45px #02061740; }
+.cv-header-block { border-bottom: 2px solid #cbd5e1; padding-bottom: 24px; gap: 20px; }
+.cv-eyebrow { color: #0369a1; font-family: var(--font-mono); font-size: .7rem; font-weight: 700; letter-spacing: .14em; margin-bottom: 10px; }
+.cv-name { color: #0f172a; font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.15; letter-spacing: -.04em; }
+.cv-role { color: #0369a1; margin-top: 10px; }
+.cv-contact-items { color: #475569; font-size: .8rem; gap: 6px; }
+.cv-paper a { color: #075985; }
+.cv-paper a:hover, .cv-paper a:focus-visible { color: #0c4a6e; text-decoration-thickness: 2px; }
+.cv-section-title { color: #0f172a; text-transform: uppercase; font-size: .8rem; letter-spacing: .1em; border-bottom: 1px solid #cbd5e1; margin-top: 28px; padding-bottom: 10px; }
+.cv-section-title > span { color: #0369a1; font-family: var(--font-mono); margin-right: 8px; }
+.cv-item-title { color: #172033; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+.cv-item-date { color: #075985; background: #e0f2fe; padding: 2px 8px; border-radius: 4px; }
+.cv-item-sub { color: #475569; line-height: 1.6; }
+.cv-item-desc { color: #334155; line-height: 1.7; }
+.cv-competencies { background: #eaf0f6; padding: 16px 20px; border-left: 3px solid #0284c7; border-radius: 4px; }
+.cv-competencies strong { color: #172033; }
+.cv-achievements { color: #334155; padding-left: 20px; font-size: .86rem; line-height: 1.65; margin: 8px 0 12px; }
+.cv-paper .cv-item { margin-bottom: 22px; }
+@media (max-width: 600px) {
+  .modal-cv-dialog .modal-body { padding: 12px; }
+  .cv-paper { padding: 24px 18px; }
+  .cv-competencies { padding: 12px; }
+}
+
 /* ==========================================================================
    ESTILOS DE IMPRESIÓN PARA PDF LIMPIO (PRINT MEDIA)
    ========================================================================== */
 @media print {
+  @page { size: A4; margin: 14mm; }
+  body > :not(#modal-cv) { display: none !important; }
+  .modal-cv-dialog .modal-body, .modal-cv-dialog .modal-container { padding: 0 !important; overflow: visible !important; max-height: none !important; background: white !important; }
+  dialog.modal-cv-dialog { max-height: none !important; overflow: visible !important; }
+  .cv-paper { box-shadow: none !important; }
+  .cv-item, .cv-header-block, .cv-competencies { break-inside: avoid; }
+  .cv-section-title { break-after: avoid; }
+  .cv-eyebrow, .cv-achievements { color: #334155 !important; }
+
   body * {
     visibility: hidden;
   }
