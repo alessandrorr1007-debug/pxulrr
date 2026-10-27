@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTypewriter();
   initNavbar();
   initScrollSpy();
-  initCustomCursor();
   initCopyEmail();
   initContactForm();
   initScrollReveal();
@@ -251,17 +250,6 @@ function initScrollSpy() {
 /* ==========================================================================
    5. CURSOR PERSONALIZADO ULTRA-SUAVE
    ========================================================================== */
-function initCustomCursor() {
-  // Solo en dispositivos de escritorio con puntero fino
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-
-  const dot = document.querySelector('.custom-cursor-dot');
-  if (!dot) return;
-
-  window.addEventListener('mousemove', (e) => {
-    dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-  });
-}
 
 /* ==========================================================================
    6. COPIAR CORREO AL PORTAPAPELES + NOTIFICACIÓN TOAST

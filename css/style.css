@@ -84,35 +84,11 @@ body {
   pointer-events: none;
 }
 
-/* Cursor Personalizado (Solo en dispositivos con ratón) */
+/* Flecha azul nativa: el punto activo coincide con la punta. */
 @media (hover: hover) and (pointer: fine) {
-  body {
-    cursor: none;
+  html, body, body * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32' viewBox='0 0 24 32'%3E%3Cpath d='M2 2v24l6-6 5 10 4-2-5-10h9Z' fill='%2338bdf8' stroke='%230b1120' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 2 2, auto !important;
   }
-  a, button, input, textarea, select, .clickable {
-    cursor: none !important;
-  }
-  
-  .custom-cursor-dot {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    background-color: var(--primary);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 99999;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
-  }
-  
-
-  
-}
-
-@media (hover: none) or (pointer: coarse) {
-  .custom-cursor-dot,
 }
 
 /* Tipografía de Utilidad */
@@ -1627,8 +1603,9 @@ dialog.modal-cv-dialog {
   .modal-header,
   .modal-footer,
   .modal-close-btn,
-  #bg-canvas,
-  .custom-cursor-dot,
+  #bg-canvas {
+    display: none !important;
+  }
   .cv-paper {
     background: #ffffff !important;
     border: none !important;
