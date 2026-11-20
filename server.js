@@ -12,6 +12,7 @@ const HOST = '0.0.0.0';
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
 app.use('/img', express.static(path.join(__dirname, 'img')));
+app.use('/vendor/three', express.static(path.join(__dirname, 'node_modules', 'three')));
 
 app.get('/favicon.svg', (_req, res) => {
   res.sendFile(path.join(__dirname, 'favicon.svg'));

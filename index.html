@@ -1,1386 +1,1059 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#050811">
 
-  <!-- Metadatos SEO -->
-  <title>Alessandro Rodríguez (Pxul.dev) | Desarrollador Web &amp; Android</title>
-  <meta name="description" content="Portafolio profesional de Alessandro Rodríguez (Pxul RR). Estudiante de Ingeniería de Sistemas e Inteligencia Artificial, desarrollador Web Full Stack, Android nativo en Kotlin y automatizaciones.">
-  <meta name="keywords" content="Alessandro Rodríguez, Pxul.dev, Pxul RR, Portafolio, Desarrollador Web, Desarrollador Android, Ingeniería de Sistemas e Inteligencia Artificial, React, Kotlin, Jetpack Compose, Supabase, JavaScript, Python">
+  <title>Pxul.dev (FOLDER) | Estudio 3D · Alessandro Rodríguez</title>
+  <meta name="description" content="Portafolio 3D interactivo de Alessandro Rodríguez (Pxul.dev). Estudio tecnológico explorable con explorador de proyectos FOLDER, laboratorio interactivo, minijuego de código y soluciones Web &amp; Móvil.">
+  <meta name="keywords" content="Alessandro Rodríguez, Pxul.dev, Pxul RR, Portafolio 3D, Desarrollador Web, Android, Kotlin, React, Supabase, Ingeniería de Sistemas e Inteligencia Artificial">
   <meta name="author" content="Alessandro Rodríguez">
-  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#070d1a" id="meta-theme-color">
 
   <!-- Open Graph -->
-  <meta property="og:site_name" content="Pxul.dev">
-  <meta property="og:locale" content="es_PE">
+  <meta property="og:title" content="Pxul.dev (FOLDER) | Estudio 3D · Alessandro Rodríguez">
+  <meta property="og:description" content="Explora el estudio 3D de Alessandro Rodríguez: proyectos Web y Android, laboratorio interactivo, minijuego de código y contacto directo.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Alessandro Rodríguez (Pxul.dev) | Portafolio Profesional">
-  <meta property="og:description" content="Estudiante de Ingeniería de Sistemas e Inteligencia Artificial, desarrollador Web Full Stack, Android nativo y creador de soluciones tecnológicas.">
 
-  <!-- Twitter / X Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alessandro Rodríguez (Pxul.dev) | Desarrollador Web &amp; Android">
-  <meta name="twitter:description" content="Aplicaciones web y Android, catálogos digitales, paneles de gestión, APIs y automatizaciones.">
-
-  <!-- Schema.org Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "name": "Alessandro Rodríguez",
-        "alternateName": ["Pxul.dev", "Pxul RR", "PX"],
-        "jobTitle": "Desarrollador Web Full Stack y Android",
-        "description": "Estudiante de Ingeniería de Sistemas e Inteligencia Artificial en Trujillo, Perú. Desarrollador de aplicaciones web, PWA, apps Android nativas en Kotlin y automatizaciones.",
-        "email": "mailto:arodriguezr1020@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Trujillo",
-          "addressCountry": "PE"
-        },
-        "sameAs": [
-          "https://github.com/alessandrorr1007-debug"
-        ],
-        "knowsAbout": [
-          "HTML5", "CSS3", "JavaScript", "React", "Tailwind CSS", "Python",
-          "Supabase", "PostgreSQL", "MySQL", "Kotlin", "Android Studio",
-          "Jetpack Compose", "Material 3", "PWA", "REST APIs", "WhatsApp Business API"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "name": "Pxul.dev — Portafolio de Alessandro Rodríguez",
-        "inLanguage": "es"
-      },
-      {
-        "@type": "ItemList",
-        "name": "Proyectos Destacados de Alessandro Rodríguez",
-        "itemListElement": [
-          {
-            "@type": "SoftwareApplication",
-            "position": 1,
-            "name": "UPAO S",
-            "applicationCategory": "EducationalApplication",
-            "operatingSystem": "Android",
-            "url": "https://upaos.netlify.app/"
-          },
-          {
-            "@type": "WebApplication",
-            "position": 2,
-            "name": "Armador de Horarios UPAO",
-            "applicationCategory": "EducationalApplication",
-            "operatingSystem": "Web",
-            "url": "https://alessandrorr1007-debug.github.io/armador-horarios/"
-          },
-          {
-            "@type": "WebApplication",
-            "position": 3,
-            "name": "PremiumPe",
-            "applicationCategory": "ShoppingApplication",
-            "operatingSystem": "Web",
-            "url": "https://premiunpe.netlify.app/"
-          }
-        ]
-      }
-    ]
-  }
-  </script>
-
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Favicon SVG -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
 
-  <!-- Hoja de Estilos Principal -->
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alessandro Rodríguez",
+    "alternateName": "Pxul.dev",
+    "jobTitle": "Estudiante de Ingeniería de Sistemas e Inteligencia Artificial & Desarrollador Web y Móvil",
+    "email": "mailto:arodriguezr1020@gmail.com",
+    "sameAs": [
+      "https://github.com/alessandrorr1007-debug"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Trujillo",
+      "addressCountry": "PE"
+    }
+  }
+  </script>
+
+  <!-- Three.js Import Map (served locally from /vendor/three) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "/vendor/three/build/three.module.js",
+      "three/addons/": "/vendor/three/examples/jsm/"
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
+<body class="mode-3d">
+  <a href="#main-workspace" class="skip-link">Saltar al espacio de trabajo</a>
 
-<body>
-  <!-- Enlace de salto para navegación con teclado -->
-  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+  <!-- ======================================================================
+       NAVBAR SUPERIOR (3 zonas limpias)
+       ====================================================================== -->
+  <header class="topbar" id="topbar">
+    <a href="#estudio" class="brand" id="brand-home" aria-label="Volver a la vista general del estudio 3D">
+      <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+      <span class="brand-name">Pxul.dev</span>
+      <span class="brand-sub">/ FOLDER</span>
+    </a>
 
-  <!-- Barra de progreso de lectura -->
-  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+    <nav class="topbar-nav" aria-label="Navegación principal">
+      <button type="button" class="nav-link is-active" data-station="inicio">Estudio</button>
+      <button type="button" class="nav-link" data-station="proyectos">Proyectos</button>
+      <button type="button" class="nav-link" data-station="sobre-mi">Sobre Mí</button>
+      <button type="button" class="nav-link" data-station="servicios">Servicios</button>
+      <button type="button" class="nav-link" data-station="laboratorio">Laboratorio</button>
+    </nav>
 
-  <!-- Cursor interactivo sutil para dispositivos de escritorio con puntero fino -->
-  <div id="cursor-ring" class="cursor-ring" aria-hidden="true"></div>
-  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+    <div class="topbar-right">
+      <button type="button" class="btn-cta-nav" data-station="contacto">Contáctame</button>
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="mobile-drawer"
+      >
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
 
-  <!-- Canvas de Constelación de Partículas (optimizado y respetuoso con reduced-motion) -->
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <!-- Menú Móvil Desplegable -->
+  <aside class="mobile-drawer" id="mobile-drawer" hidden aria-label="Menú móvil">
+    <div class="mobile-drawer-list">
+      <button type="button" class="drawer-link" data-station="inicio">Vista del Estudio</button>
+      <button type="button" class="drawer-link" data-station="proyectos">Monitor · Proyectos (FOLDER)</button>
+      <button type="button" class="drawer-link" data-station="sobre-mi">Laptop · Sobre Mí</button>
+      <button type="button" class="drawer-link" data-station="servicios">Tablet · Servicios</button>
+      <button type="button" class="drawer-link" data-station="laboratorio">Servidor · Laboratorio Tech</button>
+      <button type="button" class="drawer-link" data-station="minijuego">Consola · Bug Squash</button>
+      <button type="button" class="drawer-link" data-station="contacto">Buzón · Contacto</button>
+    </div>
+    <div class="mobile-drawer-footer">
+      <button type="button" class="drawer-util" id="mobile-theme-btn">Cambiar a modo Claro</button>
+      <button type="button" class="drawer-util" id="mobile-mode-btn">Cambiar a Vista 2D</button>
+    </div>
+  </aside>
 
-  <!-- Iluminación ambiental superior sutil -->
-  <div class="ambient-backdrop" aria-hidden="true"></div>
+  <!-- ======================================================================
+       ESPACIO INTERACTIVO PRINCIPAL (ESTUDIO 3D + ALTERNATIVA 2D LIGERA)
+       ====================================================================== -->
+  <main class="studio-viewport" id="main-workspace">
+    <!-- Escena Three.js -->
+    <div id="scene-mount" class="scene-mount" aria-label="Estudio tecnológico 3D interactivo de Pxul.dev"></div>
 
-  <!-- ==========================================================================
-       BARRA DE NAVEGACIÓN
-       ========================================================================== -->
-  <header class="site-header">
-    <nav class="navbar" aria-label="Navegación principal">
-      <div class="navbar-inner">
-        <a href="#inicio" class="nav-logo" aria-label="Pxul.dev — Ir al inicio">
-          <span class="logo-bracket" aria-hidden="true">&lt;</span>Pxul<span class="gradient-text">.dev</span><span class="logo-bracket" aria-hidden="true"> /&gt;</span>
-        </a>
+    <!-- Indicador contextual discreto: aparece ÚNICAMENTE al pasar sobre un objeto 3D -->
+    <div id="studio-hover-badge" class="studio-hover-badge" hidden aria-hidden="true">
+      <span class="hover-badge-dot" aria-hidden="true"></span>
+      <div class="hover-badge-text">
+        <strong id="hover-badge-title">Monitor · Explorador FOLDER</strong>
+        <span id="hover-badge-action">Abrir carpetas y proyectos</span>
+      </div>
+    </div>
 
-        <ul id="nav-menu" class="nav-links">
-          <li><a href="#inicio" class="nav-link active" aria-current="page">Inicio</a></li>
-          <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
-          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-          <li><a href="#servicios" class="nav-link">Servicios</a></li>
-          <li><a href="#contacto" class="nav-link">Contacto</a></li>
-          <li class="nav-mobile-actions">
-            <button type="button" class="btn btn-secondary btn-sm open-cv-btn">Ver / Descargar CV</button>
-            <a href="#contacto" class="btn btn-primary btn-sm">Contáctame</a>
-          </li>
-        </ul>
+    <!-- Presentación minimalista en vista general (se oculta al abrir ventanas) -->
+    <section class="hero-overlay" id="hero-overlay" aria-label="Presentación de Alessandro Rodríguez">
+      <p class="hero-kicker">Trujillo, Perú · Ingeniería de Sistemas e IA</p>
+      <h1 class="hero-title">Alessandro Rodríguez</h1>
+      <p class="hero-subtitle">
+        <span id="typewriter-text">Desarrollador Web Full Stack &amp; Móvil</span><span class="caret" aria-hidden="true"></span>
+      </p>
+      <div class="hero-actions">
+        <button type="button" class="btn-primary" data-station="proyectos">Abrir FOLDER</button>
+        <button type="button" class="btn-secondary" data-station="minijuego">Bug Squash</button>
+      </div>
+      <p class="hero-hint">Arrastra para rotar el estudio · Haz clic en cualquier objeto para interactuar</p>
+    </section>
 
-        <div class="nav-actions">
-          <button type="button" class="nav-cv-link open-cv-btn" title="Ver Currículum Vitae">Ver CV</button>
-          <a href="#contacto" class="btn btn-primary btn-sm nav-cta">Contáctame</a>
-          <button
-            type="button"
-            class="mobile-toggle"
-            aria-label="Abrir menú de navegación"
-            aria-expanded="false"
-            aria-controls="nav-menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- Alternativa 2D Accesible y Ligera (para móviles o preferencia de rendimiento) -->
+    <section class="lite-stage" id="lite-stage" hidden aria-label="Estudio interactivo 2D ligero">
+      <div class="lite-shell">
+        <header class="lite-header">
+          <div>
+            <p class="hero-kicker">Estudio 2D Ligero · Trujillo, Perú</p>
+            <h2 class="lite-title">Alessandro Rodríguez · Pxul.dev</h2>
+            <p class="lite-desc">
+              Explora cada estación del estudio sin carga WebGL. Todos los módulos interactivos, proyectos y herramientas funcionan de forma idéntica.
+            </p>
+          </div>
+          <div class="lite-header-actions">
+            <button type="button" class="btn-secondary" id="lite-theme-btn">Cambiar Tema</button>
+            <button type="button" class="btn-primary" id="lite-to-3d-btn">Volver al Estudio 3D</button>
+          </div>
+        </header>
+
+        <div class="lite-grid" role="list">
+          <button type="button" class="lite-card lite-card-featured" data-station="proyectos" role="listitem">
+            <span class="lite-card-code">01 · MONITOR</span>
+            <h3>Explorador de Proyectos (FOLDER)</h3>
+            <p>Carpetas por tecnología, búsqueda en tiempo real, capturas y detalles de UPAO S, Armador de Horarios y PremiumPe.</p>
+            <span class="lite-card-action">Abrir monitor &rarr;</span>
+          </button>
+
+          <button type="button" class="lite-card" data-station="sobre-mi" role="listitem">
+            <span class="lite-card-code">02 · LAPTOP</span>
+            <h3>Sobre Mí &amp; Terminal</h3>
+            <p>Perfil, trayectoria en Ingeniería de Sistemas e IA, JSON copiable y consola interactiva.</p>
+            <span class="lite-card-action">Abrir laptop &rarr;</span>
+          </button>
+
+          <button type="button" class="lite-card" data-station="servicios" role="listitem">
+            <span class="lite-card-code">03 · TABLET</span>
+            <h3>Servicios &amp; Prototipos</h3>
+            <p>8 soluciones reales en desarrollo web, catálogos, apps Android, automatización y APIs.</p>
+            <span class="lite-card-action">Abrir tablet &rarr;</span>
+          </button>
+
+          <button type="button" class="lite-card" data-station="laboratorio" role="listitem">
+            <span class="lite-card-code">04 · SERVIDOR</span>
+            <h3>Laboratorio Tecnológico</h3>
+            <p>Pruebas reales en vivo: resolutor Backtracking de horarios, inspector REST JSON y catálogo reactivo.</p>
+            <span class="lite-card-action">Abrir servidor &rarr;</span>
+          </button>
+
+          <button type="button" class="lite-card" data-station="minijuego" role="listitem">
+            <span class="lite-card-code">05 · CONSOLA</span>
+            <h3>Minijuego: Bug Squash</h3>
+            <p>Intercepta errores de código (ERR, NaN, 404) antes de que rompan el build en 4 carriles.</p>
+            <span class="lite-card-action">Jugar ahora &rarr;</span>
+          </button>
+
+          <button type="button" class="lite-card" data-station="contacto" role="listitem">
+            <span class="lite-card-code">06 · BUZÓN</span>
+            <h3>Contacto Directo</h3>
+            <p>Envía un mensaje directo por formulario, copia mi correo o abre mi GitHub.</p>
+            <span class="lite-card-action">Abrir buzón &rarr;</span>
           </button>
         </div>
       </div>
-    </nav>
-    <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
-  </header>
+    </section>
 
-  <!-- ==========================================================================
-       CONTENIDO PRINCIPAL
-       ========================================================================== -->
-  <main id="contenido-principal">
+    <!-- ====================================================================
+         CAPA DE VENTANAS INTERACTIVAS (6 ESTACIONES REALES)
+         ==================================================================== -->
+    <div class="window-layer" id="window-layer" hidden>
+      <div class="window-scrim" id="window-scrim" aria-hidden="true"></div>
 
-    <!-- ========================================================================
-         SECCIÓN HERO / INICIO
-         ======================================================================== -->
-    <section id="inicio" class="hero-section">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="hero-kicker">
-              <span>Disponible para proyectos y oportunidades</span>
-              <span class="meta-sep" aria-hidden="true">·</span>
-              <span>Trujillo, Perú</span>
-            </p>
+      <!-- ==================================================================
+           1. MONITOR: EXPLORADOR DE PROYECTOS (FOLDER)
+           ================================================================== -->
+      <section class="os-window os-window-xl" id="win-proyectos" hidden role="dialog" aria-modal="true" aria-labelledby="title-win-proyectos">
+        <header class="win-header">
+          <div class="win-title-group">
+            <button type="button" class="win-dot win-dot-close" data-close-window aria-label="Cerrar explorador de proyectos"></button>
+            <span class="win-path" id="title-win-proyectos">~/pxul.dev/proyectos</span>
+          </div>
+          <div class="win-header-controls">
+            <button type="button" class="win-action-btn" data-close-window>Volver al Estudio</button>
+          </div>
+        </header>
 
-            <p class="hero-subtitle-prefix">Hola, mi nombre es</p>
-            <h1 class="hero-title">Alessandro <span class="gradient-text">Rodríguez</span></h1>
-
-            <div class="hero-typewriter-box" aria-live="off">
-              <span class="typewriter-prompt" aria-hidden="true">&gt;</span>
-              <span id="typing-text">Estudiante de Ingeniería de Sistemas e Inteligencia Artificial</span><span class="typewriter-cursor" aria-hidden="true">|</span>
-            </div>
-
-            <p class="hero-description">
-              Estudiante de <strong>Ingeniería de Sistemas e Inteligencia Artificial</strong> con más de tres años de formación y desarrollo de proyectos.
-              Creo <strong>aplicaciones web y Android</strong>, catálogos digitales, paneles de gestión y herramientas de planificación.
-              Integro bases de datos, APIs, chatbots y automatizaciones para conectar información y simplificar tareas reales.
-            </p>
-
-            <div class="hero-cta-group">
-              <a href="#proyectos" class="btn btn-primary">
-                <span>Ver Proyectos</span>
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-              <button type="button" class="btn btn-secondary open-cv-btn" title="Ver y descargar Currículum Vitae en PDF">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-                <span>Ver / Descargar CV</span>
-              </button>
-            </div>
-
-            <div class="hero-utility-row">
-              <a href="#contacto" class="hero-utility-link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                <span>Escríbeme al Correo</span>
-              </a>
-              <span class="meta-sep" aria-hidden="true">·</span>
-              <button type="button" class="hero-utility-link copy-email-btn" title="Copiar correo electrónico">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                <span>Copiar Correo</span>
-              </button>
-              <span class="meta-sep" aria-hidden="true">·</span>
-              <a href="https://github.com/alessandrorr1007-debug" target="_blank" rel="noopener noreferrer" class="hero-utility-link" aria-label="GitHub de Alessandro Rodríguez">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                <span>GitHub</span>
-              </a>
-              <span class="meta-sep" aria-hidden="true">·</span>
-              <a href="mailto:arodriguezr1020@gmail.com" class="hero-utility-link" aria-label="Abrir cliente de correo hacia arodriguezr1020@gmail.com">
-                <span>arodriguezr1020@gmail.com</span>
-              </a>
-            </div>
+        <div class="folder-toolbar">
+          <div class="folder-search-wrap">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
+            </svg>
+            <input
+              type="search"
+              id="folder-search"
+              class="folder-search-input"
+              placeholder="Buscar proyecto o tecnología (Kotlin, React, PWA, Supabase...)"
+              autocomplete="off"
+              aria-label="Buscar proyectos por nombre o tecnología"
+            >
+            <button type="button" id="folder-search-clear" class="folder-clear-btn" hidden aria-label="Limpiar búsqueda">&times;</button>
           </div>
 
-          <!-- Panel Visual de Enfoque Técnico (Equilibrio Desktop) -->
-          <aside class="hero-showcase" aria-label="Resumen de desarrollos destacados">
-            <div class="showcase-header">
-              <span class="showcase-eyebrow">Trabajo reciente</span>
-              <span class="showcase-meta">3 proyectos publicados</span>
-            </div>
+          <div class="folder-view-toggle" role="group" aria-label="Modo de visualización">
+            <button type="button" class="view-btn is-active" data-view-mode="grid" aria-pressed="true">Cuadrícula</button>
+            <button type="button" class="view-btn" data-view-mode="list" aria-pressed="false">Lista</button>
+          </div>
+        </div>
 
-            <div class="showcase-list">
-              <button type="button" class="showcase-item open-modal-btn" data-modal="modal-upaos">
-                <div class="showcase-item-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                </div>
-                <div class="showcase-item-body">
-                  <span class="showcase-item-meta">App móvil · Kotlin &amp; Compose</span>
-                  <strong class="showcase-item-title">UPAO S · Aplicación Android</strong>
-                  <span class="showcase-item-desc">Notas, horario semanal, asistencias y Canvas LMS.</span>
-                </div>
-                <svg class="showcase-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </button>
+        <div class="folder-layout">
+          <aside class="folder-sidebar" aria-label="Carpetas de proyectos">
+            <p class="sidebar-label">CARPETAS</p>
+            <button type="button" class="folder-item is-active" data-folder="all" aria-pressed="true">
+              <span class="folder-icon" aria-hidden="true">&#128193;</span>
+              <span class="folder-name">Todos</span>
+              <span class="folder-count">3</span>
+            </button>
+            <button type="button" class="folder-item" data-folder="android" aria-pressed="false">
+              <span class="folder-icon" aria-hidden="true">&#128241;</span>
+              <span class="folder-name">Android</span>
+              <span class="folder-count">1</span>
+            </button>
+            <button type="button" class="folder-item" data-folder="web-pwa" aria-pressed="false">
+              <span class="folder-icon" aria-hidden="true">&#127760;</span>
+              <span class="folder-name">Web / PWA</span>
+              <span class="folder-count">1</span>
+            </button>
+            <button type="button" class="folder-item" data-folder="fullstack" aria-pressed="false">
+              <span class="folder-icon" aria-hidden="true">&#9889;</span>
+              <span class="folder-name">Full Stack</span>
+              <span class="folder-count">1</span>
+            </button>
 
-              <button type="button" class="showcase-item open-modal-btn" data-modal="modal-horarios">
-                <div class="showcase-item-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                </div>
-                <div class="showcase-item-body">
-                  <span class="showcase-item-meta">Herramienta web · PWA &amp; Web Workers</span>
-                  <strong class="showcase-item-title">Armador de Horarios UPAO</strong>
-                  <span class="showcase-item-desc">Backtracking sin cruces con exportación PNG, PDF e .ics.</span>
-                </div>
-                <svg class="showcase-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </button>
-
-              <button type="button" class="showcase-item open-modal-btn" data-modal="modal-premiumpe">
-                <div class="showcase-item-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                </div>
-                <div class="showcase-item-body">
-                  <span class="showcase-item-meta">Catálogo digital · React &amp; Supabase</span>
-                  <strong class="showcase-item-title">PremiumPe · Pases y Membresías</strong>
-                  <span class="showcase-item-desc">Catálogo en soles con stock y panel admin en tiempo real.</span>
-                </div>
-                <svg class="showcase-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </button>
-            </div>
-
-            <div class="showcase-footer">
-              <span>React · Kotlin · Supabase · Python · PWA</span>
-            </div>
+            <div class="sidebar-divider"></div>
+            <p class="sidebar-label">ACCESOS RÁPIDOS</p>
+            <button type="button" class="folder-quick-link" data-station="laboratorio">Probar en Laboratorio &rarr;</button>
+            <a href="https://github.com/alessandrorr1007-debug" target="_blank" rel="noopener noreferrer" class="folder-quick-link">GitHub Oficial &nearr;</a>
           </aside>
-        </div>
 
-        <!-- Franja de Indicadores de Perfil (Ancho Completo) -->
-        <div class="quick-stats" aria-label="Indicadores de perfil">
-          <div class="stat-item">
-            <span class="stat-number">+3 Años</span>
-            <span class="stat-label">En Formación &amp; Código</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Compromiso &amp; Calidad</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">Full Stack</span>
-            <span class="stat-label">Web &amp; Móvil Nativo</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">Perú / Global</span>
-            <span class="stat-label">Disponibilidad Remota</span>
-          </div>
-        </div>
-      </div>
-    </section>
+          <div class="folder-content">
+            <div class="folder-grid" id="folder-grid">
+              <!-- Proyecto 1: UPAO S -->
+              <article
+                class="project-file-card"
+                data-category="android"
+                data-search="upao s aplicacion android kotlin jetpack compose material 3 retrofit okhttp datastore workmanager canvas lms github releases movil apk"
+              >
+                <button type="button" class="project-thumb-btn" data-modal="modal-upaos" aria-label="Ver detalles de UPAO S">
+                  <img src="img/project-upaos.svg" alt="Vista previa de la aplicación Android UPAO S" loading="lazy">
+                  <span class="thumb-hover-label">Abrir inspección</span>
+                </button>
+                <div class="project-file-body">
+                  <div class="project-meta-row">
+                    <span class="project-kind">Android · App Nativa</span>
+                    <span class="project-year">APK / Release</span>
+                  </div>
+                  <h3>UPAO S · Aplicación Android</h3>
+                  <p>
+                    Cliente académico nativo para estudiantes universitarios con consulta de cursos, notas, asistencia, horarios, sincronización con Canvas LMS y notificaciones en segundo plano.
+                  </p>
+                  <p class="project-tech-line">Kotlin · Jetpack Compose · Material 3 · Retrofit · OkHttp · WorkManager</p>
+                  <div class="project-file-actions">
+                    <button type="button" class="btn-file-primary" data-modal="modal-upaos">Ver detalles</button>
+                    <a href="https://upaos.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-file-link">Web / APK &nearr;</a>
+                    <a href="https://github.com/alessandrorr1007-debug/UPAOS-APK" target="_blank" rel="noopener noreferrer" class="btn-file-link">Código &nearr;</a>
+                  </div>
+                </div>
+              </article>
 
-    <!-- ========================================================================
-         SECCIÓN SOBRE MÍ
-         ======================================================================== -->
-    <section id="sobre-mi" class="section fade-in-section">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-eyebrow">01 · Conóceme</p>
-          <h2 class="section-title">Sobre <span class="gradient-text">Mí</span></h2>
-          <p class="section-subtitle">Pasión por la arquitectura de software y la resolución creativa de problemas</p>
-        </div>
+              <!-- Proyecto 2: Armador de Horarios UPAO -->
+              <article
+                class="project-file-card"
+                data-category="web-pwa"
+                data-search="armador de horarios upao javascript html5 css3 backtracking web workers service workers pwa localstorage png pdf ics algoritmo planificador"
+              >
+                <button type="button" class="project-thumb-btn" data-modal="modal-horarios" aria-label="Ver detalles de Armador de Horarios UPAO">
+                  <img src="img/project-horarios.svg" alt="Vista previa del Armador de Horarios UPAO" loading="lazy">
+                  <span class="thumb-hover-label">Abrir inspección</span>
+                </button>
+                <div class="project-file-body">
+                  <div class="project-meta-row">
+                    <span class="project-kind">Web App · PWA Offline</span>
+                    <span class="project-year">Backtracking</span>
+                  </div>
+                  <h3>Armador de Horarios UPAO</h3>
+                  <p>
+                    Generador inteligente de combinaciones de horarios sin cruces mediante algoritmo de backtracking en Web Workers, soporte offline PWA y exportación a PNG, PDF y calendario .ics.
+                  </p>
+                  <p class="project-tech-line">JavaScript · HTML5 / CSS3 · Backtracking · Web Workers · PWA · PNG / PDF / .ics</p>
+                  <div class="project-file-actions">
+                    <button type="button" class="btn-file-primary" data-modal="modal-horarios">Ver detalles</button>
+                    <a href="https://alessandrorr1007-debug.github.io/armador-horarios/" target="_blank" rel="noopener noreferrer" class="btn-file-link">Abrir App &nearr;</a>
+                    <a href="https://github.com/alessandrorr1007-debug/armador-horarios" target="_blank" rel="noopener noreferrer" class="btn-file-link">Código &nearr;</a>
+                  </div>
+                </div>
+              </article>
 
-        <div class="about-grid">
-          <!-- Terminal Interactiva Mejorada -->
-          <div class="terminal-card">
-            <div class="terminal-header">
-              <div class="terminal-dots" aria-hidden="true">
-                <span class="terminal-dot dot-red"></span>
-                <span class="terminal-dot dot-yellow"></span>
-                <span class="terminal-dot dot-green"></span>
-              </div>
-
-              <div class="terminal-tabs" role="tablist" aria-label="Vistas de la terminal">
-                <button
-                  type="button"
-                  role="tab"
-                  id="tab-json"
-                  class="terminal-tab active"
-                  aria-selected="true"
-                  aria-controls="panel-json"
-                  data-terminal-tab="json"
-                >alessandro_developer.json</button>
-                <button
-                  type="button"
-                  role="tab"
-                  id="tab-cli"
-                  class="terminal-tab"
-                  aria-selected="false"
-                  aria-controls="panel-cli"
-                  data-terminal-tab="cli"
-                >pxul@dev:~$</button>
-              </div>
-
-              <button type="button" id="copy-json-btn" class="terminal-copy-btn" title="Copiar perfil JSON">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                <span>Copiar</span>
-              </button>
+              <!-- Proyecto 3: PremiumPe -->
+              <article
+                class="project-file-card"
+                data-category="fullstack"
+                data-search="premiumpe pases membresias react vite tailwind css supabase postgresql netlify catalogo digital panel administracion full stack"
+              >
+                <button type="button" class="project-thumb-btn" data-modal="modal-premiumpe" aria-label="Ver detalles de PremiumPe">
+                  <img src="img/project-premiumpe.svg" alt="Vista previa de la plataforma PremiumPe" loading="lazy">
+                  <span class="thumb-hover-label">Abrir inspección</span>
+                </button>
+                <div class="project-file-body">
+                  <div class="project-meta-row">
+                    <span class="project-kind">Full Stack · Catálogo</span>
+                    <span class="project-year">Supabase + React</span>
+                  </div>
+                  <h3>PremiumPe · Pases y Membresías</h3>
+                  <p>
+                    Plataforma web para catálogo de pases digitales y membresías con gestión de inventario, precios, categorías en PostgreSQL mediante Supabase y experiencia rápida en móviles.
+                  </p>
+                  <p class="project-tech-line">React · Vite · Tailwind CSS · Supabase · PostgreSQL · Netlify</p>
+                  <div class="project-file-actions">
+                    <button type="button" class="btn-file-primary" data-modal="modal-premiumpe">Ver detalles</button>
+                    <a href="https://premiunpe.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-file-link">Demo Live &nearr;</a>
+                    <a href="https://github.com/alessandrorr1007-debug/PremiunPe" target="_blank" rel="noopener noreferrer" class="btn-file-link">Código &nearr;</a>
+                  </div>
+                </div>
+              </article>
             </div>
 
-            <!-- Panel 1: Perfil JSON completo -->
-            <div id="panel-json" class="terminal-panel active" role="tabpanel" aria-labelledby="tab-json">
-              <pre class="terminal-body"><code id="developer-json-code">{
-  <span class="code-key">"desarrollador"</span>: <span class="code-str">"Alessandro Rodríguez"</span>,
-  <span class="code-key">"alias"</span>: <span class="code-str">"PX"</span>,
-  <span class="code-key">"carrera"</span>: <span class="code-str">"Ingeniería de Sistemas e Inteligencia Artificial"</span>,
-  <span class="code-key">"ubicacion"</span>: <span class="code-str">"Trujillo, Perú"</span>,
-  <span class="code-key">"especialidades"</span>: [
-    <span class="code-str">"Desarrollo Web y Aplicaciones PWA"</span>,
-    <span class="code-str">"Aplicaciones Android Nativas"</span>,
-    <span class="code-str">"Chatbots de WhatsApp y Automatización"</span>,
-    <span class="code-str">"Bases de Datos e Integración de APIs"</span>,
-    <span class="code-str">"Catálogos Digitales y Paneles de Gestión"</span>,
-    <span class="code-str">"Planificación y Optimización de Horarios"</span>,
-    <span class="code-str">"Publicación Web y Distribución de APKs"</span>
+            <div class="folder-empty" id="folder-empty" hidden>
+              <p>No se encontraron proyectos con ese filtro o término de búsqueda.</p>
+              <button type="button" class="btn-secondary" id="folder-reset-btn">Restablecer filtros</button>
+            </div>
+          </div>
+        </div>
+
+        <footer class="win-statusbar">
+          <span id="folder-status-path">~/pxul.dev/proyectos/todos</span>
+          <span id="folder-status-count">3 elementos mostrados</span>
+        </footer>
+      </section>
+
+      <!-- ==================================================================
+           2. LAPTOP: SOBRE MÍ & TERMINAL INTERACTIVA
+           ================================================================== -->
+      <section class="os-window os-window-lg" id="win-sobre-mi" hidden role="dialog" aria-modal="true" aria-labelledby="title-win-sobre-mi">
+        <header class="win-header">
+          <div class="win-title-group">
+            <button type="button" class="win-dot win-dot-close" data-close-window aria-label="Cerrar ventana Sobre Mí"></button>
+            <span class="win-path" id="title-win-sobre-mi">~/pxul.dev/sobre-mi — laptop</span>
+          </div>
+          <div class="win-header-controls">
+            <button type="button" class="win-action-btn" data-close-window>Volver al Estudio</button>
+          </div>
+        </header>
+
+        <div class="window-body about-grid">
+          <div class="about-col">
+            <article class="surface-card">
+              <div class="about-profile-head">
+                <div class="avatar-monogram" aria-hidden="true">PX</div>
+                <div>
+                  <h2>Alessandro Rodríguez</h2>
+                  <p class="muted-text">Estudiante de Ingeniería de Sistemas e Inteligencia Artificial</p>
+                  <p class="meta-inline">Trujillo, Perú · +3 años construyendo software · Remoto</p>
+                </div>
+              </div>
+              <p class="body-copy">
+                Desarrollo aplicaciones web, apps Android nativas y herramientas de automatización enfocadas en resolver problemas reales de usuarios y negocios. Combino arquitectura clara, rendimiento y diseño de interfaces cuidadas.
+              </p>
+              <div class="about-quick-metrics">
+                <div>
+                  <strong>+3 años</strong>
+                  <span>Desarrollo continuo</span>
+                </div>
+                <div>
+                  <strong>Web &amp; Android</strong>
+                  <span>React, JS y Kotlin</span>
+                </div>
+                <div>
+                  <strong>Backend</strong>
+                  <span>Supabase &amp; APIs</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="surface-card">
+              <div class="card-head-row">
+                <span class="code-filename">alessandro_developer.json</span>
+                <button type="button" class="btn-inline" id="copy-json-btn">Copiar JSON</button>
+              </div>
+              <pre class="code-block" id="profile-json"><code>{
+  "nombre": "Alessandro Rodríguez",
+  "alias": "Pxul.dev / Pxul RR",
+  "formacion": "Ingeniería de Sistemas e Inteligencia Artificial",
+  "ubicacion": "Trujillo, Perú",
+  "enfoque": [
+    "Desarrollo Web Full Stack (React, JS, Supabase)",
+    "Aplicaciones Android (Kotlin, Jetpack Compose)",
+    "Automatización, APIs y Herramientas PWA"
   ],
-  <span class="code-key">"tecnologiasClave"</span>: [
-    <span class="code-str">"HTML5"</span>, <span class="code-str">"CSS3"</span>,
-    <span class="code-str">"JavaScript"</span>, <span class="code-str">"React"</span>,
-    <span class="code-str">"Tailwind CSS"</span>, <span class="code-str">"Framer Motion"</span>,
-    <span class="code-str">"Python"</span>, <span class="code-str">"Supabase"</span>,
-    <span class="code-str">"PostgreSQL"</span>, <span class="code-str">"MySQL"</span>,
-    <span class="code-str">"Kotlin"</span>, <span class="code-str">"Android Studio"</span>,
-    <span class="code-str">"Jetpack Compose"</span>, <span class="code-str">"Material 3"</span>,
-    <span class="code-str">"Retrofit"</span>, <span class="code-str">"OkHttp"</span>,
-    <span class="code-str">"DataStore"</span>, <span class="code-str">"WorkManager"</span>,
-    <span class="code-str">"REST APIs"</span>, <span class="code-str">"WhatsApp Business API"</span>,
-    <span class="code-str">"Service Workers"</span>, <span class="code-str">"Web Workers"</span>,
-    <span class="code-str">"Git"</span>, <span class="code-str">"GitHub"</span>,
-    <span class="code-str">"GitHub Actions"</span>, <span class="code-str">"Vite"</span>,
-    <span class="code-str">"npm"</span>, <span class="code-str">"Netlify"</span>,
-    <span class="code-str">"GitHub Pages"</span>
-  ],
-  <span class="code-key">"listoParaNuevosRetos"</span>: <span class="code-bool">true</span>
+  "disponibilidad": "Proyectos freelance y colaboraciones remotas"
 }</code></pre>
+            </article>
+          </div>
+
+          <div class="about-col">
+            <article class="surface-card">
+              <div class="card-head-row">
+                <span class="code-filename">trayectoria.md</span>
+                <span class="meta-inline">Evolución</span>
+              </div>
+              <ol class="timeline-list">
+                <li>
+                  <strong>Ingeniería de Sistemas e IA</strong>
+                  <p>Formación universitaria orientada a estructuras de datos, algoritmos, arquitectura de software e inteligencia artificial aplicada.</p>
+                </li>
+                <li>
+                  <strong>Productos Reales en Producción</strong>
+                  <p>Creación y mantenimiento de UPAO S (Android), Armador de Horarios UPAO (PWA con Backtracking) y PremiumPe (React + Supabase).</p>
+                </li>
+                <li>
+                  <strong>Soluciones a Medida &amp; Automatización</strong>
+                  <p>Desarrollo de catálogos administrables, integración de APIs, bases de datos y flujos conversacionales para negocios digitales.</p>
+                </li>
+              </ol>
+            </article>
+
+            <article class="terminal-panel" aria-label="Terminal interactiva de Pxul.dev">
+              <div class="terminal-head">
+                <span class="code-filename">pxul@studio:~$</span>
+                <span class="meta-inline">Escribe <code>help</code> para ver comandos</span>
+              </div>
+              <div class="terminal-output" id="terminal-output" aria-live="polite">
+                <div class="term-line term-muted">PxulOS 3D Shell listo. Comandos: help, whoami, proyectos, servicios, lab, juego, contacto, tema, clear</div>
+              </div>
+              <form class="terminal-form" id="terminal-form" autocomplete="off">
+                <label for="terminal-input" class="sr-only">Comando de terminal</label>
+                <span class="term-prompt" aria-hidden="true">&gt;</span>
+                <input type="text" id="terminal-input" class="terminal-input" placeholder="Ej: proyectos, lab, juego, tema..." spellcheck="false">
+                <button type="submit" class="btn-inline">Ejecutar</button>
+              </form>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           3. TABLET: SERVICIOS (8 SOLUCIONES CON MINI-INTERFACES)
+           ================================================================== -->
+      <section class="os-window os-window-xl" id="win-servicios" hidden role="dialog" aria-modal="true" aria-labelledby="title-win-servicios">
+        <header class="win-header">
+          <div class="win-title-group">
+            <button type="button" class="win-dot win-dot-close" data-close-window aria-label="Cerrar ventana de Servicios"></button>
+            <span class="win-path" id="title-win-servicios">~/pxul.dev/servicios — tablet</span>
+          </div>
+          <div class="win-header-controls">
+            <button type="button" class="win-action-btn" data-close-window>Volver al Estudio</button>
+          </div>
+        </header>
+
+        <div class="window-body">
+          <div class="section-intro-row">
+            <div>
+              <h2>Servicios &amp; Soluciones Tecnológicas</h2>
+              <p class="muted-text">Cada servicio se diseña a medida con arquitectura mantenible, enfoque práctico y entrega lista para producción.</p>
             </div>
+            <button type="button" class="btn-primary" data-station="contacto">Solicitar cotización</button>
+          </div>
 
-            <!-- Panel 2: Consola Interactiva Real -->
-            <div id="panel-cli" class="terminal-panel" role="tabpanel" aria-labelledby="tab-cli" hidden>
-              <div class="terminal-cli">
-                <div class="terminal-quick-cmds" aria-label="Comandos rápidos">
-                  <button type="button" class="cli-cmd-btn" data-cmd="whoami">whoami</button>
-                  <button type="button" class="cli-cmd-btn" data-cmd="stack">stack</button>
-                  <button type="button" class="cli-cmd-btn" data-cmd="proyectos">proyectos</button>
-                  <button type="button" class="cli-cmd-btn" data-cmd="contacto">contacto</button>
-                  <button type="button" class="cli-cmd-btn" data-cmd="cv">cv</button>
-                  <button type="button" class="cli-cmd-btn" data-cmd="help">help</button>
+          <div class="services-grid">
+            <!-- 1 -->
+            <article class="service-card">
+              <div class="service-mini-ui ui-browser" aria-hidden="true">
+                <span class="mini-bar">https://tu-marca.dev</span>
+                <span class="mini-metric">99 Lighthouse</span>
+              </div>
+              <h3>Desarrollo Web a Medida</h3>
+              <p>Sitios corporativos, portafolios interactivos y aplicaciones web rápidas, responsivas y optimizadas para SEO.</p>
+              <button type="button" class="btn-service-ask" data-service-inquiry="Desarrollo Web a Medida">Consultar servicio &rarr;</button>
+            </article>
+
+            <!-- 2 (Interactivo real con switch de stock) -->
+            <article class="service-card service-card-interactive">
+              <div class="service-mini-ui ui-catalog">
+                <div class="mini-catalog-row">
+                  <span>Pase Pro Mensual</span>
+                  <strong id="demo-stock-label" class="stock-on">Disponible</strong>
+                </div>
+                <label class="mini-switch">
+                  <input type="checkbox" id="demo-stock-toggle" checked>
+                  <span>Control de stock en vivo</span>
+                </label>
+              </div>
+              <h3>Catálogos Digitales &amp; Paneles de Gestión</h3>
+              <p>Catálogos web conectados a base de datos con administración de productos, precios, categorías y disponibilidad.</p>
+              <button type="button" class="btn-service-ask" data-service-inquiry="Catálogos Digitales y Paneles de Gestión">Consultar servicio &rarr;</button>
+            </article>
+
+            <!-- 3 -->
+            <article class="service-card">
+              <div class="service-mini-ui ui-android" aria-hidden="true">
+                <span class="mini-bar">Kotlin · Compose</span>
+                <span class="mini-metric">Material 3 APK</span>
+              </div>
+              <h3>Aplicaciones Android</h3>
+              <p>Apps móviles nativas modernas con sincronización en segundo plano, almacenamiento local y distribución optimizada.</p>
+              <button type="button" class="btn-service-ask" data-service-inquiry="Aplicaciones Android">Consultar servicio &rarr;</button>
+            </article>
+
+            <!-- 4 -->
+            <article class="service-card">
+              <div class="service-mini-ui ui-bot" aria-hidden="true">
+                <span class="mini-chat-in">¿Horarios y precios?</span>
+                <span class="mini-chat-out">Catálogo enviado ✓</span>
+              </div>
+              <h3>Chatbots &amp; Automatización</h3>
+              <p>Flujos automatizados de atención, respuestas rápidas y procesos repetitivos para reducir tiempos operativos.</p>
+              <button type="button" class="btn-service-ask" data-service-inquiry="Chatbots y Automatización">Consultar servicio &rarr;</button>
+            </article>
+
+            <!-- 5 -->
+            <article class="service-card">
+              <div class="service-mini-ui ui-db" aria-hidden="true">
+                <span class="mini-bar">PostgreSQL · Supabase</span>
+                <span class="mini-metric">RLS + Auth</span>
+              </div>
+              <h3>Bases de Datos &amp; Backend</h3>
+              <p>Modelado relacional, autenticación segura, reglas de acceso y sincronización de datos en tiempo real.</p>
+              <button type="button" class="btn-service-ask" data-service-inquiry="Bases de Datos y Backend">Consultar servicio &rarr;</button>
+            </article>
+
+            <!-- 6 -->
+            <article class="service-card">
+              <div class="service-mini-ui ui-api" aria-hidden="true">
+                <span class="mini-bar">GET /v1/sync</span>
+                <span class="mini-metric">200 OK · JSON</span>
+              </div>
+              <h3>Integración de APIs &amp; Servicios</h3>
+              <p>Conexión entre plataformas académicas, servicios externos, webhooks y clientes web o móviles.</p>
+              <button type="button" class="btn-service-ask" data-service-inquiry="Integración de APIs y Servicios">Consultar servicio &rarr;</button>
+            </article>
+
+            <!-- 7 -->
+            <article class="service-card">
+              <div class="service-mini-ui ui-algo" aria-hidden="true">
+                <span class="mini-bar">Backtracking · Worker</span>
+                <span class="mini-metric">0 Cruces</span>
+              </div>
+              <h3>Planificadores &amp; Herramientas de Cálculo</h3>
+              <p>Motores de combinación de horarios, validadores lógicos y utilidades offline instalables como PWA.</p>
+              <button type="button" class="btn-service-ask" data-service-inquiry="Planificadores y Herramientas de Cálculo">Consultar servicio &rarr;</button>
+            </article>
+
+            <!-- 8 -->
+            <article class="service-card">
+              <div class="service-mini-ui ui-deploy" aria-hidden="true">
+                <span class="mini-bar">CI · Netlify · Releases</span>
+                <span class="mini-metric">Optimizado</span>
+              </div>
+              <h3>Publicación &amp; Mejora de Aplicaciones</h3>
+              <p>Auditoría UI/UX, optimización de rendimiento, corrección de errores y despliegue limpio de apps existentes.</p>
+              <button type="button" class="btn-service-ask" data-service-inquiry="Publicación y Mejora de Aplicaciones">Consultar servicio &rarr;</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           4. SERVIDOR: LABORATORIO TECNOLÓGICO INTERACTIVO
+           ================================================================== -->
+      <section class="os-window os-window-xl" id="win-laboratorio" hidden role="dialog" aria-modal="true" aria-labelledby="title-win-laboratorio">
+        <header class="win-header">
+          <div class="win-title-group">
+            <button type="button" class="win-dot win-dot-close" data-close-window aria-label="Cerrar Laboratorio Tecnológico"></button>
+            <span class="win-path" id="title-win-laboratorio">~/pxul.dev/laboratorio — servidor</span>
+          </div>
+          <div class="win-header-controls">
+            <button type="button" class="win-action-btn" data-close-window>Volver al Estudio</button>
+          </div>
+        </header>
+
+        <div class="window-body lab-shell">
+          <div class="lab-tabs" role="tablist" aria-label="Módulos del laboratorio interactivo">
+            <button type="button" class="lab-tab is-active" role="tab" aria-selected="true" data-lab-tab="solver" aria-controls="lab-panel-solver">
+              1. Backtracking · Horarios
+            </button>
+            <button type="button" class="lab-tab" role="tab" aria-selected="false" data-lab-tab="api" aria-controls="lab-panel-api">
+              2. Inspector REST / JSON
+            </button>
+            <button type="button" class="lab-tab" role="tab" aria-selected="false" data-lab-tab="realtime" aria-controls="lab-panel-realtime">
+              3. Catálogo Reactivo
+            </button>
+          </div>
+
+          <!-- TAB 1: Resolutor Backtracking (inspirado en Armador de Horarios UPAO) -->
+          <div class="lab-panel" id="lab-panel-solver" role="tabpanel">
+            <div class="lab-split">
+              <div class="surface-card">
+                <div class="card-head-row">
+                  <h3>Selector de Secciones</h3>
+                  <button type="button" class="btn-primary btn-sm" id="lab-auto-solve">Resolver sin cruces</button>
+                </div>
+                <p class="muted-text">
+                  Elige un turno por curso y comprueba cómo el motor detecta colisiones en vivo o calcula una combinación válida automáticamente.
+                </p>
+
+                <div class="lab-course-list" id="lab-course-list">
+                  <div class="lab-course-row">
+                    <span><strong>Estructuras de Datos</strong></span>
+                    <div class="lab-slot-group">
+                      <button type="button" class="lab-slot-btn is-selected" data-course="0" data-slot="0">Lun 08:00</button>
+                      <button type="button" class="lab-slot-btn" data-course="0" data-slot="1">Mar 10:00</button>
+                    </div>
+                  </div>
+                  <div class="lab-course-row">
+                    <span><strong>Inteligencia Artificial</strong></span>
+                    <div class="lab-slot-group">
+                      <button type="button" class="lab-slot-btn is-selected" data-course="1" data-slot="0">Lun 08:00</button>
+                      <button type="button" class="lab-slot-btn" data-course="1" data-slot="1">Mié 08:00</button>
+                    </div>
+                  </div>
+                  <div class="lab-course-row">
+                    <span><strong>Base de Datos</strong></span>
+                    <div class="lab-slot-group">
+                      <button type="button" class="lab-slot-btn is-selected" data-course="2" data-slot="0">Mar 10:00</button>
+                      <button type="button" class="lab-slot-btn" data-course="2" data-slot="1">Jue 10:00</button>
+                    </div>
+                  </div>
+                  <div class="lab-course-row">
+                    <span><strong>Desarrollo Móvil</strong></span>
+                    <div class="lab-slot-group">
+                      <button type="button" class="lab-slot-btn is-selected" data-course="3" data-slot="0">Mié 08:00</button>
+                      <button type="button" class="lab-slot-btn" data-course="3" data-slot="1">Vie 10:00</button>
+                    </div>
+                  </div>
                 </div>
 
-                <div id="cli-output" class="cli-output" aria-live="polite">
-                  <p class="cli-line cli-muted">Pxul.dev Shell — escribe un comando o selecciona uno arriba. Prueba <span class="code-key">help</span>.</p>
+                <div class="lab-status-box" id="lab-solver-status" aria-live="polite">
+                  Conflicto detectado en Lun 08:00. Pulsa «Resolver sin cruces» para ejecutar Backtracking.
                 </div>
+              </div>
 
-                <form id="cli-form" class="cli-input-row" autocomplete="off">
-                  <label for="cli-input" class="sr-only">Ejecutar comando en terminal interactiva</label>
-                  <span class="cli-prompt" aria-hidden="true">pxul@dev:~$</span>
-                  <input id="cli-input" type="text" class="cli-input" placeholder="whoami, stack, proyectos, cv, clear..." spellcheck="false">
-                </form>
+              <div class="surface-card">
+                <div class="card-head-row">
+                  <h3>Matriz Semanal en Vivo</h3>
+                  <span class="meta-inline">4 cursos · 0 cruces objetivo</span>
+                </div>
+                <div class="schedule-matrix" id="lab-schedule-matrix" aria-live="polite"></div>
               </div>
             </div>
           </div>
 
-          <!-- Presentación Personal -->
-          <div class="about-text">
-            <h3>Desarrollo aplicaciones que resuelven necesidades reales</h3>
-            <p>
-              Soy <strong>Alessandro Rodríguez</strong>, estudiante de <strong>Ingeniería de Sistemas e Inteligencia Artificial</strong> en Trujillo, Perú. Desarrollo aplicaciones web y Android para facilitar tareas cotidianas, organizar información y conectar servicios en una misma herramienta.
+          <!-- TAB 2: Inspector REST / JSON de los 3 proyectos reales -->
+          <div class="lab-panel" id="lab-panel-api" role="tabpanel" hidden>
+            <div class="lab-split">
+              <div class="surface-card">
+                <h3>Endpoints del Ecosistema Pxul.dev</h3>
+                <p class="muted-text">Inspecciona la arquitectura y metadatos reales de cada proyecto en formato JSON.</p>
+                <div class="api-endpoint-list">
+                  <button type="button" class="api-endpoint-btn is-active" data-endpoint="upaos">
+                    <span class="http-method">GET</span>
+                    <code>/api/v1/projects/upao-s</code>
+                  </button>
+                  <button type="button" class="api-endpoint-btn" data-endpoint="horarios">
+                    <span class="http-method">GET</span>
+                    <code>/api/v1/projects/armador-horarios</code>
+                  </button>
+                  <button type="button" class="api-endpoint-btn" data-endpoint="premiumpe">
+                    <span class="http-method">GET</span>
+                    <code>/api/v1/projects/premiumpe</code>
+                  </button>
+                </div>
+                <div class="api-meta-bar">
+                  <span id="lab-api-status">200 OK</span>
+                  <span id="lab-api-latency">14 ms · Cliente local</span>
+                </div>
+              </div>
+
+              <div class="surface-card">
+                <div class="card-head-row">
+                  <span class="code-filename" id="lab-api-title">GET /api/v1/projects/upao-s</span>
+                  <button type="button" class="btn-inline" id="lab-api-copy">Copiar respuesta</button>
+                </div>
+                <pre class="code-block lab-json-output" id="lab-api-output"></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: Simulador de Catálogo Reactivo (inspirado en PremiumPe) -->
+          <div class="lab-panel" id="lab-panel-realtime" role="tabpanel" hidden>
+            <div class="lab-split">
+              <div class="surface-card">
+                <h3>Panel de Gestión en Vivo</h3>
+                <p class="muted-text">Modifica precio, plan o stock para ver la sincronización instantánea en la vista de cliente.</p>
+                <div class="lab-form-grid">
+                  <label class="field-group">
+                    <span>Nombre del pase</span>
+                    <input type="text" id="lab-prod-name" value="Pase Streaming 4K · 1 Mes" maxlength="40">
+                  </label>
+                  <label class="field-group">
+                    <span>Precio (PEN)</span>
+                    <input type="number" id="lab-prod-price" value="18" min="1" max="500" step="1">
+                  </label>
+                  <label class="field-group">
+                    <span>Unidades en stock</span>
+                    <input type="range" id="lab-prod-stock" min="0" max="25" value="12">
+                    <span class="meta-inline" id="lab-prod-stock-val">12 disponibles</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="surface-card">
+                <div class="card-head-row">
+                  <h3>Vista Previa Cliente</h3>
+                  <span class="meta-inline" id="lab-sync-indicator">Sincronizado</span>
+                </div>
+                <div class="live-catalog-preview">
+                  <div class="live-catalog-top">
+                    <span class="live-catalog-cat">Catálogo Digital · Instantáneo</span>
+                    <span class="live-catalog-stock" id="lab-preview-stock">En stock (12)</span>
+                  </div>
+                  <h4 id="lab-preview-name">Pase Streaming 4K · 1 Mes</h4>
+                  <p class="live-catalog-price" id="lab-preview-price">S/ 18.00</p>
+                  <pre class="code-block live-catalog-json" id="lab-preview-json"></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           5. CONSOLA: MINIJUEGO DE PROGRAMACIÓN (BUG SQUASH)
+           ================================================================== -->
+      <section class="os-window os-window-lg" id="win-minijuego" hidden role="dialog" aria-modal="true" aria-labelledby="title-win-minijuego">
+        <header class="win-header">
+          <div class="win-title-group">
+            <button type="button" class="win-dot win-dot-close" data-close-window aria-label="Cerrar minijuego Bug Squash"></button>
+            <span class="win-path" id="title-win-minijuego">~/pxul.dev/minijuego — Bug Squash</span>
+          </div>
+          <div class="win-header-controls">
+            <button type="button" class="win-action-btn" data-close-window>Volver al Estudio</button>
+          </div>
+        </header>
+
+        <div class="window-body game-shell">
+          <div class="game-top-bar">
+            <div class="game-stats" aria-live="polite">
+              <div class="game-stat">
+                <span>PUNTOS</span>
+                <strong id="game-score">0</strong>
+              </div>
+              <div class="game-stat">
+                <span>RACHA</span>
+                <strong id="game-streak">0</strong>
+              </div>
+              <div class="game-stat">
+                <span>BUILDS</span>
+                <strong id="game-lives">3 / 3</strong>
+              </div>
+              <div class="game-stat">
+                <span>RÉCORD</span>
+                <strong id="game-best">0</strong>
+              </div>
+            </div>
+
+            <div class="game-controls">
+              <button type="button" class="btn-primary btn-sm" id="game-start-btn">Iniciar partida</button>
+              <button type="button" class="btn-secondary btn-sm" id="game-restart-btn" hidden>Reiniciar</button>
+            </div>
+          </div>
+
+          <p class="game-rules">
+            Toca los bloques rojos (<code>ERR</code>, <code>NaN</code>, <code>404</code>, <code>BUG</code>) o pulsa las teclas <kbd>1</kbd>–<kbd>4</kbd> antes de que rompan el build. Deja pasar el código verde (<code>OK</code>).
+          </p>
+
+          <div class="game-board" id="game-board" role="application" aria-label="Tablero del minijuego Bug Squash">
+            <div class="game-lanes" id="game-lanes">
+              <div class="game-lane" data-lane="0"><span class="lane-tag">1 · HTML</span></div>
+              <div class="game-lane" data-lane="1"><span class="lane-tag">2 · JS</span></div>
+              <div class="game-lane" data-lane="2"><span class="lane-tag">3 · KOTLIN</span></div>
+              <div class="game-lane" data-lane="3"><span class="lane-tag">4 · SQL</span></div>
+            </div>
+            <div class="game-tokens-layer" id="game-tokens-layer"></div>
+            <div class="game-build-line"><span>LÍNEA DE PRODUCCIÓN · DEPLOY</span></div>
+
+            <div class="game-overlay" id="game-overlay">
+              <h3 id="game-overlay-title">Bug Squash · Compilador Express</h3>
+              <p id="game-overlay-msg">Intercepta los errores antes de que lleguen a producción. Compatible con clic, pantalla táctil y teclado (1–4).</p>
+              <button type="button" class="btn-primary" id="game-overlay-btn">Comenzar a depurar</button>
+            </div>
+          </div>
+
+          <div class="game-pad" aria-label="Controles táctiles por carril">
+            <button type="button" class="pad-btn" data-hit-lane="0"><span>1</span> HTML</button>
+            <button type="button" class="pad-btn" data-hit-lane="1"><span>2</span> JS</button>
+            <button type="button" class="pad-btn" data-hit-lane="2"><span>3</span> KOTLIN</button>
+            <button type="button" class="pad-btn" data-hit-lane="3"><span>4</span> SQL</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           6. BUZÓN: CONTACTO DIRECTO (FORMSUBMIT CONSERVADO)
+           ================================================================== -->
+      <section class="os-window os-window-lg" id="win-contacto" hidden role="dialog" aria-modal="true" aria-labelledby="title-win-contacto">
+        <header class="win-header">
+          <div class="win-title-group">
+            <button type="button" class="win-dot win-dot-close" data-close-window aria-label="Cerrar ventana de Contacto"></button>
+            <span class="win-path" id="title-win-contacto">~/pxul.dev/contacto — buzón</span>
+          </div>
+          <div class="win-header-controls">
+            <button type="button" class="win-action-btn" data-close-window>Volver al Estudio</button>
+          </div>
+        </header>
+
+        <div class="window-body contact-grid">
+          <div class="contact-info-col">
+            <h2>Conversemos sobre tu proyecto</h2>
+            <p class="muted-text">
+              Disponible para proyectos web, aplicaciones Android, catálogos administrables, integraciones de APIs y automatización.
             </p>
-            <p>
-              Mis proyectos incluyen <strong>UPAO S</strong>, una app para consultar notas, horarios y asistencias; un <strong>armador de horarios universitarios</strong> que genera combinaciones sin cruces; y <strong>PremiumPe</strong>, un catálogo digital con panel de administración.
-            </p>
-            <p>
-              Trabajo con <strong>React, JavaScript, Kotlin y Supabase</strong>, integrando APIs, almacenamiento y automatización según lo que necesita cada proyecto. Me gusta llevar una idea desde su primera interfaz hasta una aplicación publicada y seguir mejorándola con el uso.
-            </p>
 
-            <dl class="about-facts">
-              <div class="about-fact">
-                <dt>Formación</dt>
-                <dd>Ingeniería de Sistemas e IA</dd>
+            <div class="contact-cards">
+              <div class="contact-item-card">
+                <span class="contact-item-label">CORREO DIRECTO</span>
+                <a href="mailto:arodriguezr1020@gmail.com" class="contact-item-value">arodriguezr1020@gmail.com</a>
+                <button type="button" class="btn-inline" id="copy-email-btn">Copiar correo</button>
               </div>
-              <div class="about-fact">
-                <dt>Ubicación</dt>
-                <dd>Trujillo, Perú · Remoto</dd>
-              </div>
-              <div class="about-fact">
-                <dt>Especialidad</dt>
-                <dd>Web Full Stack, PWA &amp; Android</dd>
-              </div>
-              <div class="about-fact">
-                <dt>Distribución</dt>
-                <dd>Netlify, GitHub Pages &amp; APKs</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ========================================================================
-         SECCIÓN HABILIDADES (SKILLS)
-         ======================================================================== -->
-    <section id="habilidades" class="section fade-in-section">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-eyebrow">02 · Stack Tecnológico</p>
-          <h2 class="section-title">Habilidades &amp; <span class="gradient-text">Herramientas</span></h2>
-          <p class="section-subtitle">Tecnologías con las que construyo soluciones robustas día a día</p>
-        </div>
+              <div class="contact-item-card">
+                <span class="contact-item-label">REPOSITORIOS</span>
+                <a href="https://github.com/alessandrorr1007-debug" target="_blank" rel="noopener noreferrer" class="contact-item-value">
+                  github.com/alessandrorr1007-debug &nearr;
+                </a>
+                <span class="meta-inline">Código fuente y releases públicos</span>
+              </div>
 
-        <!-- Filtro Interactivo de Categorías -->
-        <div class="filter-bar" role="tablist" aria-label="Filtrar habilidades por categoría">
-          <button type="button" class="filter-btn active" role="tab" aria-selected="true" data-skill-filter="all">Todas <span class="filter-count">42</span></button>
-          <button type="button" class="filter-btn" role="tab" aria-selected="false" data-skill-filter="frontend">Frontend <span class="filter-count">7</span></button>
-          <button type="button" class="filter-btn" role="tab" aria-selected="false" data-skill-filter="backend">Backend &amp; Datos <span class="filter-count">6</span></button>
-          <button type="button" class="filter-btn" role="tab" aria-selected="false" data-skill-filter="android">Android <span class="filter-count">8</span></button>
-          <button type="button" class="filter-btn" role="tab" aria-selected="false" data-skill-filter="web-opt">Web &amp; Optimización <span class="filter-count">7</span></button>
-          <button type="button" class="filter-btn" role="tab" aria-selected="false" data-skill-filter="deploy">Publicación <span class="filter-count">8</span></button>
-          <button type="button" class="filter-btn" role="tab" aria-selected="false" data-skill-filter="integrations">Integraciones <span class="filter-count">6</span></button>
-        </div>
-
-        <div class="skills-container">
-          <!-- 1. Frontend -->
-          <article class="skill-category-card spotlight-card" data-skill-category="frontend">
-            <div class="category-header">
-              <div class="category-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              <div class="contact-item-card">
+                <span class="contact-item-label">UBICACIÓN &amp; MODALIDAD</span>
+                <strong class="contact-item-value">Trujillo, Perú · Remoto</strong>
+                <span class="meta-inline">Respuesta habitual en menos de 24 h</span>
               </div>
-              <div>
-                <h3>Frontend &amp; Experiencia de Usuario</h3>
-                <p class="category-subtitle">Interfaces web modernas · 7 tecnologías</p>
-              </div>
-            </div>
-            <ul class="skills-list">
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 3l1.6 16.2L12 21l6.4-1.8L20 3H4z"/><path d="M8.5 8h7l-.3 3.5H9.2l.2 2.5 2.6.8 2.6-.8.2-1.5"/></svg>
-                <span>HTML5</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 3l1.6 16.2L12 21l6.4-1.8L20 3H4z"/><path d="M8 8h8l-.5 4H9.5m5.6 0-.4 3.5-2.7.8-2.7-.8"/></svg>
-                <span>CSS3</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M10.5 9v5.5a1.5 1.5 0 0 1-3 0"/><path d="M16.5 10.5a1.7 1.7 0 0 0-3 .8c0 1.8 3.2 1.1 3.2 3.2a1.8 1.8 0 0 1-3.4.6"/></svg>
-                <span>JavaScript</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.8"/><ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(120 12 12)"/></svg>
-                <span>React</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M6 10c1-2.5 2.8-3.5 5-2.5 1.5.7 2.2 2 3.5 2.2 1.5.3 2.7-.4 3.5-1.7"/><path d="M4 15.5c1-2.5 2.8-3.5 5-2.5 1.5.7 2.2 2 3.5 2.2 1.5.3 2.7-.4 3.5-1.7"/></svg>
-                <span>Tailwind CSS</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="14" height="11" rx="2"/><rect x="14" y="9" width="8" height="11" rx="1.8"/></svg>
-                <span>Diseño responsivo</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14l-7 7h7L5 21v-7h7L5 4z"/></svg>
-                <span>Framer Motion</span>
-              </li>
-            </ul>
-          </article>
-
-          <!-- 2. Backend & Datos -->
-          <article class="skill-category-card spotlight-card" data-skill-category="backend">
-            <div class="category-header">
-              <div class="category-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
-              </div>
-              <div>
-                <h3>Backend &amp; Datos</h3>
-                <p class="category-subtitle">Integración y persistencia · 6 tecnologías</p>
-              </div>
-            </div>
-            <ul class="skills-list">
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4c-3 0-4 1.2-4 3v2h5v1H7c-2 0-3 1.4-3 3.5S5 17 7 17h1v-2c0-1.6 1.2-3 3-3h4c1.6 0 3-1 3-3V7c0-1.8-1.4-3-6-3z"/><path d="M12 20c3 0 4-1.2 4-3v-2h-5v-1h6c2 0 3-1.4 3-3.5S19 7 17 7"/></svg>
-                <span>Python</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 4 14 12 14 11 22 20 10 12 10 13 2"/></svg>
-                <span>Supabase</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
-                <span>PostgreSQL</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="9" y1="10" x2="9" y2="20"/><line x1="15" y1="10" x2="15" y2="20"/></svg>
-                <span>MySQL</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><polyline points="8 7 17 7 17 16"/><polyline points="16 17 7 17 7 8"/></svg>
-                <span>REST APIs</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4c-2 0-2 2-2 4s0 3-2 4c2 1 2 2 2 4s0 4 2 4"/><path d="M16 4c2 0 2 2 2 4s0 3 2 4c-2 1-2 2-2 4s0 4-2 4"/></svg>
-                <span>JSON</span>
-              </li>
-            </ul>
-          </article>
-
-          <!-- 3. Desarrollo Android -->
-          <article class="skill-category-card spotlight-card" data-skill-category="android">
-            <div class="category-header">
-              <div class="category-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-              </div>
-              <div>
-                <h3>Desarrollo Android</h3>
-                <p class="category-subtitle">Aplicaciones nativas con Kotlin · 8 tecnologías</p>
-              </div>
-            </div>
-            <ul class="skills-list">
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15a7 7 0 0 1 14 0v2H5v-2z"/><line x1="8" y1="6" x2="10" y2="9"/><line x1="16" y1="6" x2="14" y2="9"/><circle cx="9.5" cy="13.5" r="0.8" fill="currentColor"/><circle cx="14.5" cy="13.5" r="0.8" fill="currentColor"/></svg>
-                <span>Android Studio</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><polygon points="4 4 20 4 12 12 20 20 4 20 4 4"/></svg>
-                <span>Kotlin</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 21 7 21 17 12 22 3 17 3 7 12 2"/><polyline points="12 12 21 7"/><polyline points="12 12 3 7"/><line x1="12" y1="12" x2="12" y2="22"/></svg>
-                <span>Jetpack Compose</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polygon points="12 5 18 17 6 17 12 5"/></svg>
-                <span>Material 3</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"/><polyline points="14 6 20 12 14 18"/><circle cx="6" cy="12" r="2"/></svg>
-                <span>Retrofit</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-                <span>OkHttp</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v10H4z"/><path d="M8 11h8M8 14h5"/></svg>
-                <span>DataStore</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><polyline points="12 8 12 12 15 14"/></svg>
-                <span>WorkManager</span>
-              </li>
-            </ul>
-          </article>
-
-          <!-- 4. Aplicaciones Web & Optimización -->
-          <article class="skill-category-card spotlight-card" data-skill-category="web-opt">
-            <div class="category-header">
-              <div class="category-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a14.5 14.5 0 0 0 0 18 14.5 14.5 0 0 0 0-18"/><path d="M3 12h18"/></svg>
-              </div>
-              <div>
-                <h3>Aplicaciones Web &amp; Optimización</h3>
-                <p class="category-subtitle">Herramientas para tareas reales · 7 tecnologías</p>
-              </div>
-            </div>
-            <ul class="skills-list">
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M12 18v3M8 21h8"/><path d="m12 8-2 4h4l-2 4"/></svg>
-                <span>PWA</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-                <span>Service Workers</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
-                <span>Web Workers</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><path d="M12 7v5l-6 5M12 12l6 5"/></svg>
-                <span>Backtracking</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 12h16"/><circle cx="8" cy="9" r="0.8" fill="currentColor"/><circle cx="8" cy="15" r="0.8" fill="currentColor"/></svg>
-                <span>localStorage</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M12 18v-6m-3 3 3 3 3-3"/></svg>
-                <span>Exportación PNG / PDF</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                <span>iCalendar (.ics)</span>
-              </li>
-            </ul>
-          </article>
-
-          <!-- 5. Herramientas & Publicación -->
-          <article class="skill-category-card spotlight-card" data-skill-category="deploy">
-            <div class="category-header">
-              <div class="category-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
-              </div>
-              <div>
-                <h3>Herramientas &amp; Publicación</h3>
-                <p class="category-subtitle">Del código a una aplicación publicada · 8 tecnologías</p>
-              </div>
-            </div>
-            <ul class="skills-list">
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M6 8.5V16a2 2 0 0 0 2 2h7.5M18 8.5v7"/></svg>
-                <span>Git</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.95-2.34 4.82-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
-                <span>GitHub</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-                <span>GitHub Actions</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 4 14 11 14 10 22 20 10 13 10 13 2"/></svg>
-                <span>Vite</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v10H3z"/><path d="M7 11v6M11 11v6M15 11v4"/></svg>
-                <span>npm</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 22 12 12 22 2 12 12 2"/><path d="M8 12h8M12 8v8"/></svg>
-                <span>Netlify</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><path d="M8 14h8"/></svg>
-                <span>GitHub Pages</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-                <span>GitHub Releases</span>
-              </li>
-            </ul>
-          </article>
-
-          <!-- 6. Integraciones & Automatización -->
-          <article class="skill-category-card spotlight-card" data-skill-category="integrations">
-            <div class="category-header">
-              <div class="category-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-              </div>
-              <div>
-                <h3>Integraciones &amp; Automatización</h3>
-                <p class="category-subtitle">Servicios conectados · 6 tecnologías</p>
-              </div>
-            </div>
-            <ul class="skills-list">
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                <span>WhatsApp Business API</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                <span>Canvas LMS</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                <span>FormSubmit</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                <span>Notificaciones Android</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-                <span>Sincronización de datos</span>
-              </li>
-              <li class="skill-item">
-                <svg class="skill-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-                <span>Catálogos en tiempo real</span>
-              </li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SECCIÓN PROYECTOS DESTACADOS
-         ======================================================================== -->
-    <section id="proyectos" class="section fade-in-section">
-      <div class="container">
-        <div class="section-header section-header-split">
-          <div>
-            <p class="section-eyebrow">03 · Casos de Éxito</p>
-            <h2 class="section-title">Proyectos <span class="gradient-text">Destacados</span></h2>
-            <p class="section-subtitle">Una selección de desarrollos que combinan lógica, funcionalidad y diseño</p>
-          </div>
-          <div class="filter-bar filter-bar-compact" role="tablist" aria-label="Filtrar proyectos">
-            <button type="button" class="filter-btn active" role="tab" aria-selected="true" data-project-filter="all">Todos</button>
-            <button type="button" class="filter-btn" role="tab" aria-selected="false" data-project-filter="android">Android</button>
-            <button type="button" class="filter-btn" role="tab" aria-selected="false" data-project-filter="web">Web / PWA</button>
-            <button type="button" class="filter-btn" role="tab" aria-selected="false" data-project-filter="fullstack">Full Stack</button>
-          </div>
-        </div>
-
-        <div class="projects-grid">
-          <!-- Proyecto 1: UPAO S -->
-          <article class="project-card spotlight-card" data-project-category="android">
-            <div class="project-preview">
-              <img
-                src="img/project-upaos.svg"
-                alt="UPAO S: Tu vida universitaria, en tu celular"
-                class="project-preview-img"
-                loading="lazy"
-                width="960"
-                height="600"
-                referrerpolicy="no-referrer"
-              >
-              <div class="project-preview-overlay">
-                <button type="button" class="btn-preview-modal open-modal-btn" data-modal="modal-upaos">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-                  <span>Ver detalles</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="project-details">
-              <p class="project-meta">App móvil · Android Nativo</p>
-              <h3>UPAO S · Aplicación Android</h3>
-              <p>Aplicación Android para estudiantes de la UPAO: consulta de notas, horario semanal, control de asistencias, calculadora de notas e integración con Canvas LMS.</p>
-              <p class="project-tech-inline">
-                <span>Kotlin</span><span class="meta-sep" aria-hidden="true">·</span>
-                <span>Jetpack Compose</span><span class="meta-sep" aria-hidden="true">·</span>
-                <span>Material 3</span><span class="meta-sep" aria-hidden="true">·</span>
-                <span>Android</span>
-              </p>
-              <div class="project-actions">
-                <a href="https://upaos.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">Ver web</a>
-                <a href="https://github.com/alessandrorr1007-debug/UPAOS-APK" target="_blank" rel="noopener noreferrer" class="project-link-btn outline">Repositorio del APK</a>
-                <button type="button" class="project-link-btn ghost open-modal-btn" data-modal="modal-upaos" aria-label="Ver detalles técnicos de UPAO S">Detalles</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Proyecto 2: Armador de Horarios -->
-          <article class="project-card spotlight-card" data-project-category="web">
-            <div class="project-preview">
-              <img
-                src="img/project-horarios.svg"
-                alt="Armador de Horarios: Organiza tus cursos. Encuentra tu horario."
-                class="project-preview-img"
-                loading="lazy"
-                width="960"
-                height="600"
-                referrerpolicy="no-referrer"
-              >
-              <div class="project-preview-overlay">
-                <button type="button" class="btn-preview-modal open-modal-btn" data-modal="modal-horarios">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-                  <span>Ver detalles</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="project-details">
-              <p class="project-meta">Herramienta web · PWA</p>
-              <h3>Armador de Horarios UPAO</h3>
-              <p>Generador de horarios universitarios sin cruces. Procesa cursos del portal UPAO, respeta ligas de teoría, práctica y laboratorio, y permite exportar el horario a imagen, PDF o calendario.</p>
-              <p class="project-tech-inline">
-                <span>JavaScript</span><span class="meta-sep" aria-hidden="true">·</span>
-                <span>HTML5 / CSS3</span><span class="meta-sep" aria-hidden="true">·</span>
-                <span>PWA</span><span class="meta-sep" aria-hidden="true">·</span>
-                <span>Web Workers</span>
-              </p>
-              <div class="project-actions">
-                <a href="https://alessandrorr1007-debug.github.io/armador-horarios/" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">Ver web</a>
-                <a href="https://github.com/alessandrorr1007-debug/armador-horarios" target="_blank" rel="noopener noreferrer" class="project-link-btn outline">Repositorio</a>
-                <button type="button" class="project-link-btn ghost open-modal-btn" data-modal="modal-horarios" aria-label="Ver detalles técnicos de Armador de Horarios UPAO">Detalles</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Proyecto 3: PremiumPe -->
-          <article class="project-card spotlight-card" data-project-category="fullstack">
-            <div class="project-preview">
-              <img
-                src="img/project-premiumpe.svg"
-                alt="PremiumPe: Pases digitales y membresías en Perú"
-                class="project-preview-img"
-                loading="lazy"
-                width="960"
-                height="600"
-                referrerpolicy="no-referrer"
-              >
-              <div class="project-preview-overlay">
-                <button type="button" class="btn-preview-modal open-modal-btn" data-modal="modal-premiumpe">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-                  <span>Ver detalles</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="project-details">
-              <p class="project-meta">Catálogo digital · Full Stack</p>
-              <h3>PremiumPe · Pases y Membresías</h3>
-              <p>Catálogo de suscripciones digitales en Perú con precios en soles, disponibilidad de productos y panel de administración para gestionar productos y contenido en tiempo real.</p>
-              <p class="project-tech-inline">
-                <span>React</span><span class="meta-sep" aria-hidden="true">·</span>
-                <span>Vite</span><span class="meta-sep" aria-hidden="true">·</span>
-                <span>Tailwind CSS</span><span class="meta-sep" aria-hidden="true">·</span>
-                <span>Supabase</span>
-              </p>
-              <div class="project-actions">
-                <a href="https://premiunpe.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn primary">Ver web</a>
-                <a href="https://github.com/alessandrorr1007-debug/PremiunPe" target="_blank" rel="noopener noreferrer" class="project-link-btn outline">Repositorio</a>
-                <button type="button" class="project-link-btn ghost open-modal-btn" data-modal="modal-premiumpe" aria-label="Ver detalles técnicos de PremiumPe">Detalles</button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SECCIÓN SERVICIOS / QUÉ OFREZCO
-         ======================================================================== -->
-    <section id="servicios" class="section fade-in-section">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-eyebrow">04 · Propuesta de Valor</p>
-          <h2 class="section-title">¿Qué Puedo <span class="gradient-text">Hacer por Ti?</span></h2>
-          <p class="section-subtitle">Soluciones adaptadas a las necesidades reales de tu negocio o proyecto</p>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card spotlight-card">
-            <div class="service-card-top">
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              </div>
-              <span class="service-index">01</span>
-            </div>
-            <h3>Desarrollo Web a Medida</h3>
-            <p>Sitios corporativos, landing pages y portafolios con diseño responsivo. Interfaces claras, navegación accesible y formularios conectados al correo de tu negocio.</p>
-            <button type="button" class="service-inquire-btn" data-service="Desarrollo Web a Medida">
-              <span>Consultar servicio</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-          </article>
-
-          <article class="service-card spotlight-card">
-            <div class="service-card-top">
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              </div>
-              <span class="service-index">02</span>
-            </div>
-            <h3>Catálogos Digitales &amp; Paneles de Gestión</h3>
-            <p>Catálogos de productos y suscripciones con precios, disponibilidad y contenido editable. Paneles de administración para mantener tu negocio actualizado.</p>
-            <button type="button" class="service-inquire-btn" data-service="Catálogos Digitales y Paneles de Gestión">
-              <span>Consultar servicio</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-          </article>
-
-          <article class="service-card spotlight-card">
-            <div class="service-card-top">
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-              </div>
-              <span class="service-index">03</span>
-            </div>
-            <h3>Aplicaciones Android</h3>
-            <p>Apps nativas con Kotlin y Jetpack Compose: consulta de información, almacenamiento local, notificaciones y conexión con servicios externos.</p>
-            <button type="button" class="service-inquire-btn" data-service="Aplicaciones Android">
-              <span>Consultar servicio</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-          </article>
-
-          <article class="service-card spotlight-card">
-            <div class="service-card-top">
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8.01" y2="16"/><line x1="16" y1="16" x2="16.01" y2="16"/></svg>
-              </div>
-              <span class="service-index">04</span>
-            </div>
-            <h3>Chatbots &amp; Automatización</h3>
-            <p>Bots para WhatsApp e integración con bases de datos para gestionar reservas, responder consultas y reducir tareas repetitivas.</p>
-            <button type="button" class="service-inquire-btn" data-service="Chatbots y Automatización">
-              <span>Consultar servicio</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-          </article>
-
-          <article class="service-card spotlight-card">
-            <div class="service-card-top">
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
-              </div>
-              <span class="service-index">05</span>
-            </div>
-            <h3>Bases de Datos &amp; Backend</h3>
-            <p>Modelado de datos con Supabase, PostgreSQL y MySQL. Integración de consultas y servicios para conectar la información de tus aplicaciones.</p>
-            <button type="button" class="service-inquire-btn" data-service="Bases de Datos y Backend">
-              <span>Consultar servicio</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-          </article>
-
-          <article class="service-card spotlight-card">
-            <div class="service-card-top">
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-              </div>
-              <span class="service-index">06</span>
-            </div>
-            <h3>Integración de APIs &amp; Servicios</h3>
-            <p>Conexión de aplicaciones con APIs REST y plataformas externas. Sincronización de información y flujos que reúnen tus herramientas en una sola experiencia.</p>
-            <button type="button" class="service-inquire-btn" data-service="Integración de APIs y Servicios">
-              <span>Consultar servicio</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-          </article>
-
-          <article class="service-card spotlight-card">
-            <div class="service-card-top">
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
-              </div>
-              <span class="service-index">07</span>
-            </div>
-            <h3>Planificadores &amp; Herramientas de Cálculo</h3>
-            <p>Generadores de horarios sin cruces, calculadoras y herramientas de organización. Soluciones con restricciones y exportación a imagen, PDF o calendario.</p>
-            <button type="button" class="service-inquire-btn" data-service="Planificadores y Herramientas de Cálculo">
-              <span>Consultar servicio</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-          </article>
-
-          <article class="service-card spotlight-card">
-            <div class="service-card-top">
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
-              </div>
-              <span class="service-index">08</span>
-            </div>
-            <h3>Publicación &amp; Mejora de Aplicaciones</h3>
-            <p>Publicación de sitios en Netlify y GitHub Pages, distribución de APKs con GitHub Releases y automatización de compilaciones con GitHub Actions. Mejoras de interfaces y funciones existentes.</p>
-            <button type="button" class="service-inquire-btn" data-service="Publicación y Mejora de Aplicaciones">
-              <span>Consultar servicio</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SECCIÓN CONTACTO
-         ======================================================================== -->
-    <section id="contacto" class="section fade-in-section">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-eyebrow">05 · Vías de Comunicación</p>
-          <h2 class="section-title">Ponte en <span class="gradient-text">Contacto</span></h2>
-          <p class="section-subtitle">¿Tienes una idea, un proyecto o una oportunidad laboral? ¡Hablemos!</p>
-        </div>
-
-        <div class="contact-wrapper">
-          <!-- Tarjetas de Información de Contacto Directo -->
-          <div class="contact-info-cards">
-            <div class="contact-card">
-              <div class="contact-card-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              </div>
-              <div class="contact-card-content">
-                <h4>Correo Electrónico</h4>
-                <a href="mailto:arodriguezr1020@gmail.com">arodriguezr1020@gmail.com</a>
-              </div>
-              <button type="button" class="copy-btn copy-email-btn" title="Copiar correo electrónico">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                <span>Copiar</span>
-              </button>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-card-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.95-2.34 4.82-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
-              </div>
-              <div class="contact-card-content">
-                <h4>Perfil en GitHub</h4>
-                <a href="https://github.com/alessandrorr1007-debug" target="_blank" rel="noopener noreferrer">github.com/alessandrorr1007-debug</a>
-              </div>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-card-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div class="contact-card-content">
-                <h4>Ubicación</h4>
-                <p>Trujillo, Perú · Trabajo Remoto Disponible</p>
-              </div>
-            </div>
-
-            <div class="contact-cv-card">
-              <div>
-                <h4>Currículum Vitae</h4>
-                <p>Consulta mi formación, competencias técnicas y proyectos en formato imprimible o PDF.</p>
-              </div>
-              <button type="button" class="btn btn-secondary btn-sm open-cv-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                <span>Abrir CV</span>
-              </button>
             </div>
           </div>
 
-          <!-- Formulario de Contacto Funcional -->
-          <div class="contact-form-container">
-            <h3>Envíame un Mensaje</h3>
-            <p class="contact-form-intro">Responderé a tu correo a la mayor brevedad posible.</p>
+          <form
+            class="contact-form surface-card"
+            id="contact-form"
+            action="https://formsubmit.co/arodriguezr1020@gmail.com"
+            method="POST"
+            novalidate
+          >
+            <input type="hidden" name="_subject" id="form-hidden-subject" value="Nuevo mensaje desde Pxul.dev (Estudio 3D)">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_url" value="https://alessandrorr1007-debug.github.io/pxulrr/">
+            <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off">
 
-            <div id="selected-service-banner" class="selected-service-banner" hidden>
-              <span>Consulta sobre: <strong id="selected-service-name"></strong></span>
-              <button type="button" id="clear-service-btn" class="clear-service-btn" aria-label="Quitar servicio seleccionado">&times;</button>
+            <div class="field-group">
+              <label for="contact-name">Nombre completo</label>
+              <input type="text" id="contact-name" name="name" placeholder="Tu nombre o empresa" required minlength="2" autocomplete="name">
+              <span class="field-error" id="error-name" aria-live="polite"></span>
             </div>
 
-            <form id="contact-form" action="https://formsubmit.co/arodriguezr1020@gmail.com" method="POST" novalidate>
-              <input type="hidden" name="_subject" id="form-subject" value="Nuevo mensaje desde tu Portafolio Web">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_url" value="https://alessandrorr1007-debug.github.io/pxulrr/">
+            <div class="field-group">
+              <label for="contact-email">Correo electrónico</label>
+              <input type="email" id="contact-email" name="email" placeholder="nombre@ejemplo.com" required autocomplete="email">
+              <span class="field-error" id="error-email" aria-live="polite"></span>
+            </div>
 
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name" class="form-label">Tu Nombre <span aria-hidden="true">*</span></label>
-                  <input type="text" id="name" name="name" class="form-input" placeholder="Ej. Carlos Mendoza" autocomplete="name" required minlength="2" aria-describedby="name-error">
-                  <span id="name-error" class="field-error" role="alert"></span>
-                </div>
+            <div class="field-group">
+              <label for="contact-subject">Asunto</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="Ej: Desarrollo web, App Android, Catálogo..." required minlength="3">
+              <span class="field-error" id="error-subject" aria-live="polite"></span>
+            </div>
 
-                <div class="form-group">
-                  <label for="email" class="form-label">Tu Correo Electrónico <span aria-hidden="true">*</span></label>
-                  <input type="email" id="email" name="email" class="form-input" placeholder="nombre@correo.com" autocomplete="email" required aria-describedby="email-error">
-                  <span id="email-error" class="field-error" role="alert"></span>
-                </div>
+            <div class="field-group">
+              <div class="field-label-row">
+                <label for="contact-message">Mensaje</label>
+                <span class="char-counter" id="message-char-count">0 / 1000</span>
               </div>
+              <textarea id="contact-message" name="message" rows="4" maxlength="1000" placeholder="Cuéntame sobre tu idea, objetivos y plazos estimados..." required minlength="10"></textarea>
+              <span class="field-error" id="error-message" aria-live="polite"></span>
+            </div>
 
-              <div class="form-group">
-                <div class="form-label-row">
-                  <label for="message" class="form-label">¿En qué puedo ayudarte? <span aria-hidden="true">*</span></label>
-                  <span id="message-counter" class="field-counter" aria-live="off">0 caracteres</span>
-                </div>
-                <textarea id="message" name="message" class="form-textarea" placeholder="Cuéntame sobre tu proyecto, consulta o propuesta..." required minlength="10" aria-describedby="message-error"></textarea>
-                <span id="message-error" class="field-error" role="alert"></span>
-              </div>
-
-              <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-full">
-                <span class="btn-label">Enviar Mensaje</span>
-                <svg class="btn-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-              </button>
-
-              <div id="form-feedback" class="form-feedback" role="status" aria-live="polite" aria-atomic="true"></div>
-            </form>
-          </div>
+            <button type="submit" class="btn-primary btn-full" id="contact-submit-btn">Enviar mensaje</button>
+            <div class="form-feedback" id="form-feedback" role="status" aria-live="polite" hidden></div>
+          </form>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
-  <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-info">
-          <a href="#inicio" class="nav-logo">
-            <span class="logo-bracket" aria-hidden="true">&lt;</span>Pxul<span class="gradient-text">.dev</span><span class="logo-bracket" aria-hidden="true"> /&gt;</span>
-          </a>
-          <p>Estudiante de Ingeniería de Sistemas e Inteligencia Artificial · Desarrollador Web &amp; Móvil</p>
-        </div>
-
-        <nav class="footer-links" aria-label="Navegación de pie de página">
-          <a href="#inicio">Inicio</a>
-          <a href="#sobre-mi">Sobre Mí</a>
-          <a href="#habilidades">Habilidades</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Alessandro Rodríguez (Pxul RR). Desarrollado con código limpio y alto rendimiento.</p>
-      </div>
+  <!-- ======================================================================
+       DOCK INFERIOR SIMPLIFICADO (NAVEGACIÓN + TEMA + VISTA 2D)
+       ====================================================================== -->
+  <nav class="studio-dock" id="studio-dock" aria-label="Controles del estudio">
+    <div class="dock-stations">
+      <button type="button" class="dock-btn is-active" data-station="inicio" title="Vista general del estudio">Estudio</button>
+      <button type="button" class="dock-btn" data-station="proyectos" title="Monitor: Explorador FOLDER">Monitor</button>
+      <button type="button" class="dock-btn" data-station="sobre-mi" title="Laptop: Sobre Mí">Laptop</button>
+      <button type="button" class="dock-btn" data-station="servicios" title="Tablet: Servicios">Tablet</button>
+      <button type="button" class="dock-btn" data-station="laboratorio" title="Servidor: Laboratorio Tech">Servidor</button>
+      <button type="button" class="dock-btn" data-station="minijuego" title="Consola: Minijuego Bug Squash">Juego</button>
+      <button type="button" class="dock-btn" data-station="contacto" title="Buzón: Contacto directo">Buzón</button>
     </div>
-  </footer>
 
-  <!-- Contenedor Toast -->
-  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <span class="dock-divider" aria-hidden="true"></span>
 
-  <!-- ==========================================================================
-       MODALES DE DETALLES DE PROYECTOS (<dialog>)
-       ========================================================================== -->
+    <div class="dock-utils">
+      <button type="button" class="dock-util-btn" id="theme-toggle-btn" aria-label="Cambiar entre modo claro y oscuro" title="Lámpara: cambiar tema">
+        <span id="theme-toggle-label">Claro</span>
+      </button>
+      <button type="button" class="dock-util-btn" id="mode-toggle-btn" aria-label="Alternar entre Estudio 3D y Vista 2D ligera" title="Cambiar modo 3D / 2D">
+        <span id="mode-toggle-label">2D</span>
+      </button>
+    </div>
+  </nav>
 
-  <!-- Modal Proyecto 1: UPAO S -->
-  <dialog id="modal-upaos" class="project-modal" closedby="any" aria-labelledby="modal-upaos-title">
-    <div class="modal-container">
-      <div class="modal-header">
-        <div class="modal-title-group">
-          <p class="modal-kicker">App móvil · Android Nativo</p>
+  <!-- ======================================================================
+       MODALES DE DETALLE DE PROYECTOS (<dialog>)
+       ====================================================================== -->
+  <dialog class="project-dialog" id="modal-upaos" aria-labelledby="modal-upaos-title">
+    <div class="dialog-shell">
+      <header class="dialog-head">
+        <div>
+          <span class="project-kind">Android Nativo · Kotlin</span>
           <h3 id="modal-upaos-title">UPAO S · Aplicación Android</h3>
-          <p class="modal-subtitle">Centralización académica para estudiantes de la UPAO</p>
         </div>
-        <button type="button" class="modal-close-btn" aria-label="Cerrar detalles de UPAO S">&times;</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="modal-media">
-          <img src="img/project-upaos.svg" alt="Vista previa de UPAO S" class="modal-img" width="960" height="600" referrerpolicy="no-referrer">
-        </div>
-
-        <div class="modal-info-grid">
-          <div class="modal-info-block">
-            <h4>Descripción del proyecto</h4>
-            <p>Aplicación Android nativa creada para facilitar la consulta de calificaciones, horario semanal y control de asistencias de estudiantes de la UPAO en una sola interfaz rápida y moderna.</p>
-          </div>
-          <div class="modal-info-block">
-            <h4>Implementación clave</h4>
-            <ul class="modal-feature-list">
-              <li><strong>Interfaz nativa:</strong> diseñada con Kotlin, Jetpack Compose y Material 3.</li>
-              <li><strong>Integración y utilidades:</strong> conexión con Canvas LMS, calculadora de notas, persistencia local con DataStore y notificaciones con WorkManager.</li>
-              <li><strong>Distribución:</strong> publicación de versiones APK gestionadas mediante GitHub Releases.</li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="modal-tech-inline">
-          <strong>Stack:</strong> Kotlin · Jetpack Compose · Material 3 · Retrofit · OkHttp · DataStore · WorkManager · Canvas LMS · GitHub Releases
+        <button type="button" class="dialog-close" data-close-modal aria-label="Cerrar ventana">&times;</button>
+      </header>
+      <div class="dialog-body">
+        <img src="img/project-upaos.svg" alt="Interfaz de UPAO S Android" class="dialog-preview">
+        <p>
+          Aplicación móvil nativa construida para centralizar la experiencia académica de estudiantes universitarios: acceso rápido a cursos, calificaciones, asistencia, horarios y tareas sincronizadas con Canvas LMS.
         </p>
+        <h4>Arquitectura y Tecnologías</h4>
+        <p class="dialog-tech-list">Kotlin · Jetpack Compose · Material 3 · Retrofit · OkHttp · DataStore · WorkManager · Canvas LMS · GitHub Releases</p>
+        <h4>Aspectos destacados</h4>
+        <ul class="dialog-list">
+          <li>Interfaz declarativa moderna construida con Jetpack Compose y Material 3.</li>
+          <li>Sincronización periódica y alertas académicas mediante WorkManager.</li>
+          <li>Distribución directa de versiones mediante página web oficial y GitHub Releases.</li>
+        </ul>
       </div>
-
-      <div class="modal-footer">
-        <a href="https://github.com/alessandrorr1007-debug/UPAOS-APK" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Repositorio del APK</a>
-        <a href="https://upaos.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Ver web del proyecto</a>
-      </div>
+      <footer class="dialog-foot">
+        <a href="https://upaos.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary">Abrir Web / APK &nearr;</a>
+        <a href="https://github.com/alessandrorr1007-debug/UPAOS-APK" target="_blank" rel="noopener noreferrer" class="btn-secondary">Ver en GitHub &nearr;</a>
+      </footer>
     </div>
   </dialog>
 
-  <!-- Modal Proyecto 2: Armador de Horarios -->
-  <dialog id="modal-horarios" class="project-modal" closedby="any" aria-labelledby="modal-horarios-title">
-    <div class="modal-container">
-      <div class="modal-header">
-        <div class="modal-title-group">
-          <p class="modal-kicker">Herramienta web · PWA</p>
+  <dialog class="project-dialog" id="modal-horarios" aria-labelledby="modal-horarios-title">
+    <div class="dialog-shell">
+      <header class="dialog-head">
+        <div>
+          <span class="project-kind">Web App · PWA Offline</span>
           <h3 id="modal-horarios-title">Armador de Horarios UPAO</h3>
-          <p class="modal-subtitle">Planificador académico inteligente sin cruces de horario</p>
         </div>
-        <button type="button" class="modal-close-btn" aria-label="Cerrar detalles de Armador de Horarios UPAO">&times;</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="modal-media">
-          <img src="img/project-horarios.svg" alt="Vista previa de Armador de Horarios UPAO" class="modal-img" width="960" height="600" referrerpolicy="no-referrer">
-        </div>
-
-        <div class="modal-info-grid">
-          <div class="modal-info-block">
-            <h4>Descripción del proyecto</h4>
-            <p>Herramienta web progresiva que procesa cursos del portal UPAO y calcula automáticamente combinaciones válidas respetando las ligas obligatorias entre teoría, práctica y laboratorio.</p>
-          </div>
-          <div class="modal-info-block">
-            <h4>Implementación clave</h4>
-            <ul class="modal-feature-list">
-              <li><strong>Motor combinatorio:</strong> algoritmo de backtracking para descartar cruces y respetar restricciones de ligas.</li>
-              <li><strong>Rendimiento fluido:</strong> cálculo aislado en Web Workers con persistencia en localStorage y soporte PWA offline.</li>
-              <li><strong>Exportación directa:</strong> descarga de horarios listos en PNG, PDF e iCalendar (.ics).</li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="modal-tech-inline">
-          <strong>Stack:</strong> JavaScript · HTML5 / CSS3 · Backtracking · Web Workers · Service Workers (PWA) · localStorage · PNG / PDF / .ics
+        <button type="button" class="dialog-close" data-close-modal aria-label="Cerrar ventana">&times;</button>
+      </header>
+      <div class="dialog-body">
+        <img src="img/project-horarios.svg" alt="Interfaz de Armador de Horarios UPAO" class="dialog-preview">
+        <p>
+          Herramienta web progresiva que genera automáticamente combinaciones válidas de horarios sin cruces horarios, permitiendo comparar alternativas y exportar el resultado final listo para matrícula.
         </p>
+        <h4>Arquitectura y Tecnologías</h4>
+        <p class="dialog-tech-list">JavaScript · HTML5 / CSS3 · Backtracking · Web Workers · Service Workers (PWA) · localStorage · Exportación PNG / PDF / .ics</p>
+        <h4>Aspectos destacados</h4>
+        <ul class="dialog-list">
+          <li>Algoritmo de backtracking ejecutado en Web Workers para mantener fluidez de interfaz.</li>
+          <li>Funcionamiento offline instalable mediante Service Workers y persistencia en localStorage.</li>
+          <li>Exportación directa a imagen PNG, documento PDF y archivo de calendario .ics.</li>
+        </ul>
       </div>
-
-      <div class="modal-footer">
-        <a href="https://github.com/alessandrorr1007-debug/armador-horarios" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Ver Repositorio</a>
-        <a href="https://alessandrorr1007-debug.github.io/armador-horarios/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Abrir aplicación</a>
-      </div>
+      <footer class="dialog-foot">
+        <a href="https://alessandrorr1007-debug.github.io/armador-horarios/" target="_blank" rel="noopener noreferrer" class="btn-primary">Abrir Aplicación &nearr;</a>
+        <a href="https://github.com/alessandrorr1007-debug/armador-horarios" target="_blank" rel="noopener noreferrer" class="btn-secondary">Ver en GitHub &nearr;</a>
+      </footer>
     </div>
   </dialog>
 
-  <!-- Modal Proyecto 3: PremiumPe -->
-  <dialog id="modal-premiumpe" class="project-modal" closedby="any" aria-labelledby="modal-premiumpe-title">
-    <div class="modal-container">
-      <div class="modal-header">
-        <div class="modal-title-group">
-          <p class="modal-kicker">Catálogo digital · Full Stack</p>
+  <dialog class="project-dialog" id="modal-premiumpe" aria-labelledby="modal-premiumpe-title">
+    <div class="dialog-shell">
+      <header class="dialog-head">
+        <div>
+          <span class="project-kind">Full Stack · React + Supabase</span>
           <h3 id="modal-premiumpe-title">PremiumPe · Pases y Membresías</h3>
-          <p class="modal-subtitle">Catálogo de suscripciones digitales en Perú con gestión en tiempo real</p>
         </div>
-        <button type="button" class="modal-close-btn" aria-label="Cerrar detalles de PremiumPe">&times;</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="modal-media">
-          <img src="img/project-premiumpe.svg" alt="Vista previa de PremiumPe" class="modal-img" width="960" height="600" referrerpolicy="no-referrer">
-        </div>
-
-        <div class="modal-info-grid">
-          <div class="modal-info-block">
-            <h4>Descripción del proyecto</h4>
-            <p>Plataforma web orientada al mercado peruano para exhibir pases digitales y membresías con precios en soles, disponibilidad actualizada al instante y administración centralizada.</p>
-          </div>
-          <div class="modal-info-block">
-            <h4>Implementación clave</h4>
-            <ul class="modal-feature-list">
-              <li><strong>Frontend moderno:</strong> interfaz rápida construida con React, Vite y Tailwind CSS.</li>
-              <li><strong>Datos en tiempo real:</strong> integración con Supabase para sincronizar productos, precios y stock al instante.</li>
-              <li><strong>Panel administrativo:</strong> gestión directa de catálogo y publicación continua en Netlify.</li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="modal-tech-inline">
-          <strong>Stack:</strong> React · Vite · Tailwind CSS · Supabase · PostgreSQL · Netlify
+        <button type="button" class="dialog-close" data-close-modal aria-label="Cerrar ventana">&times;</button>
+      </header>
+      <div class="dialog-body">
+        <img src="img/project-premiumpe.svg" alt="Interfaz de PremiumPe" class="dialog-preview">
+        <p>
+          Plataforma web para la exhibición y administración de pases digitales y membresías, conectada a PostgreSQL mediante Supabase para actualizar catálogo, disponibilidad y precios sin editar código.
         </p>
+        <h4>Arquitectura y Tecnologías</h4>
+        <p class="dialog-tech-list">React · Vite · Tailwind CSS · Supabase · PostgreSQL · Netlify</p>
+        <h4>Aspectos destacados</h4>
+        <ul class="dialog-list">
+          <li>Catálogo rápido construido con React, Vite y Tailwind CSS adaptable a móviles.</li>
+          <li>Persistencia en PostgreSQL con Supabase y gestión estructurada de planes.</li>
+          <li>Despliegue continuo y alto rendimiento de carga en Netlify.</li>
+        </ul>
       </div>
-
-      <div class="modal-footer">
-        <a href="https://github.com/alessandrorr1007-debug/PremiunPe" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Ver Repositorio</a>
-        <a href="https://premiunpe.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Ver web en vivo</a>
-      </div>
+      <footer class="dialog-foot">
+        <a href="https://premiunpe.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-primary">Ver Demo Live &nearr;</a>
+        <a href="https://github.com/alessandrorr1007-debug/PremiunPe" target="_blank" rel="noopener noreferrer" class="btn-secondary">Ver en GitHub &nearr;</a>
+      </footer>
     </div>
   </dialog>
 
-  <!-- ==========================================================================
-       MODAL DE CURRÍCULUM VITAE (CV INTERACTIVO & IMPRIMIBLE A PDF)
-       ========================================================================== -->
-  <dialog id="modal-cv" class="project-modal modal-cv-dialog" closedby="any" aria-labelledby="modal-cv-title">
-    <div class="modal-container">
-      <div class="modal-header">
-        <div class="modal-title-group">
-          <p class="modal-kicker">Perfil Profesional · Imprimible a PDF</p>
-          <h3 id="modal-cv-title">Currículum Vitae · Alessandro Rodríguez</h3>
-          <p class="modal-subtitle">Estudiante de Ingeniería de Sistemas e Inteligencia Artificial &amp; Desarrollador Web/Móvil</p>
-        </div>
-        <button type="button" class="modal-close-btn" aria-label="Cerrar modal del currículum">&times;</button>
-      </div>
+  <!-- Notificación Toast accesible -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-      <div class="modal-body">
-        <div class="cv-paper">
-          <div class="cv-header-block">
-            <div>
-              <p class="cv-eyebrow">PX / DESARROLLO DE SOFTWARE</p>
-              <h2 class="cv-name">Alessandro Rodríguez</h2>
-              <p class="cv-role">Desarrollador Web y Android</p>
-            </div>
-            <div class="cv-contact-items">
-              <span>Trujillo, Perú · Disponible para trabajo remoto</span>
-              <a href="mailto:arodriguezr1020@gmail.com">arodriguezr1020@gmail.com</a>
-              <a href="https://github.com/alessandrorr1007-debug" target="_blank" rel="noopener noreferrer">github.com/alessandrorr1007-debug</a>
-            </div>
-          </div>
-
-          <h3 class="cv-section-title"><span>01</span> Perfil profesional</h3>
-          <p class="cv-item-desc">Estudiante de Ingeniería de Sistemas e Inteligencia Artificial con más de tres años de formación y experiencia práctica en proyectos propios. Desarrollo aplicaciones web con React y soluciones Android con Kotlin y Jetpack Compose. Mi trabajo abarca integración de APIs REST, persistencia de datos, automatización y publicación de aplicaciones, con énfasis en resolver necesidades de gestión y organización.</p>
-
-          <h3 class="cv-section-title"><span>02</span> Formación académica</h3>
-          <div class="cv-item">
-            <div class="cv-item-title">
-              <span>Ingeniería de Sistemas e Inteligencia Artificial</span>
-              <span class="cv-item-date">En curso</span>
-            </div>
-            <p class="cv-item-sub">Más de tres años de formación. Aplicación práctica de desarrollo de software, bases de datos y algoritmos en proyectos propios.</p>
-          </div>
-
-          <h3 class="cv-section-title"><span>03</span> Competencias técnicas</h3>
-          <div class="cv-competencies">
-            <p class="cv-item-desc">
-              <strong>Web:</strong> HTML5, CSS3, JavaScript, React, Tailwind CSS, Framer Motion y Vite.<br>
-              <strong>Android:</strong> Kotlin, Android Studio, Jetpack Compose, Material 3, Retrofit, OkHttp, DataStore y WorkManager.<br>
-              <strong>Datos e integraciones:</strong> Python, Supabase, PostgreSQL, MySQL, APIs REST, WhatsApp Business API y Canvas LMS.<br>
-              <strong>Aplicaciones y publicación:</strong> PWA, Service Workers, Web Workers, Git, GitHub, GitHub Actions, Netlify, GitHub Pages y GitHub Releases.
-            </p>
-          </div>
-
-          <h3 class="cv-section-title"><span>04</span> Experiencia en proyectos</h3>
-          <div class="cv-item">
-            <div class="cv-item-title"><span>UPAO S · Aplicación Android</span></div>
-            <p class="cv-item-desc">Desarrollé una aplicación Android para centralizar la consulta de calificaciones, horarios y asistencias de estudiantes UPAO.</p>
-            <ul class="cv-achievements">
-              <li>Implementé interfaces nativas con Kotlin, Jetpack Compose y Material 3.</li>
-              <li>Integré Canvas LMS, calculadora de notas, persistencia local y notificaciones.</li>
-              <li>Configuré la distribución de APKs mediante GitHub Releases.</li>
-            </ul>
-            <p class="cv-item-desc"><a href="https://upaos.netlify.app/" target="_blank" rel="noopener noreferrer">Web del proyecto</a> · <a href="https://github.com/alessandrorr1007-debug/UPAOS-APK" target="_blank" rel="noopener noreferrer">Repositorio del APK</a></p>
-          </div>
-
-          <div class="cv-item">
-            <div class="cv-item-title"><span>Armador de Horarios UPAO</span></div>
-            <p class="cv-item-desc">Diseñé una herramienta de planificación académica que genera combinaciones de horarios sin cruces.</p>
-            <ul class="cv-achievements">
-              <li>Implementé un algoritmo de backtracking con restricciones de teoría, práctica y laboratorio.</li>
-              <li>Separé el procesamiento en Web Workers e incorporé soporte PWA.</li>
-              <li>Habilité exportación de horarios a PNG, PDF e iCalendar.</li>
-            </ul>
-            <p class="cv-item-desc"><a href="https://alessandrorr1007-debug.github.io/armador-horarios/" target="_blank" rel="noopener noreferrer">Ver aplicación</a> · <a href="https://github.com/alessandrorr1007-debug/armador-horarios" target="_blank" rel="noopener noreferrer">Repositorio</a></p>
-          </div>
-
-          <div class="cv-item">
-            <div class="cv-item-title"><span>PremiumPe · Catálogo digital</span></div>
-            <p class="cv-item-desc">Desarrollé un catálogo de suscripciones digitales con administración de productos y precios en soles.</p>
-            <ul class="cv-achievements">
-              <li>Construí la interfaz con React y Tailwind CSS, utilizando Vite.</li>
-              <li>Integré Supabase para sincronizar contenido y disponibilidad de productos.</li>
-              <li>Implementé un panel de gestión y publiqué la aplicación en Netlify.</li>
-            </ul>
-            <p class="cv-item-desc"><a href="https://premiunpe.netlify.app/" target="_blank" rel="noopener noreferrer">Ver web</a> · <a href="https://github.com/alessandrorr1007-debug/PremiunPe" target="_blank" rel="noopener noreferrer">Repositorio</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm copy-email-btn">Copiar correo</button>
-        <button type="button" class="btn btn-primary btn-sm" id="print-cv-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-          <span>Imprimir / Guardar en PDF</span>
-        </button>
-        <button type="button" class="btn btn-secondary btn-sm modal-close-action">Cerrar</button>
-      </div>
-    </div>
-  </dialog>
-
-  <!-- Script Principal -->
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
