@@ -1,1 +1,181 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Armador de Horarios"><defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1120"/><stop offset="1" stop-color="#1e293b"/></linearGradient></defs><rect width="960" height="540" fill="url(#bg)"/><circle cx="820" cy="80" r="220" fill="#a78bfa" opacity=".08"/><rect x="72" y="90" width="816" height="360" rx="24" fill="#0f172a" stroke="#a78bfa" stroke-opacity=".4"/><circle cx="104" cy="122" r="5" fill="#a78bfa"/><circle cx="124" cy="122" r="5" fill="#a78bfa" opacity=".5"/><circle cx="144" cy="122" r="5" fill="#a78bfa" opacity=".25"/><path d="M72 150H888" stroke="#a78bfa" stroke-opacity=".2"/><text x="112" y="248" fill="#a78bfa" font-family="Arial,sans-serif" font-size="46" font-weight="700">Armador de Horarios</text><text x="112" y="298" fill="#cbd5e1" font-family="Arial,sans-serif" font-size="23">Organiza tus cursos. Encuentra tu horario.</text><rect x="112" y="340" width="180" height="6" rx="3" fill="#a78bfa"/><rect x="308" y="340" width="92" height="6" rx="3" fill="#a78bfa" opacity=".25"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="Armador de Horarios UPAO — Generador de horarios sin cruces">
+  <defs>
+    <linearGradient id="bg-horarios" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050914"/>
+      <stop offset="50%" stop-color="#0b1326"/>
+      <stop offset="100%" stop-color="#11182d"/>
+    </linearGradient>
+    <radialGradient id="glow-horarios" cx="0.25" cy="0.2" r="0.65">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-horarios" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#60a5fa" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="960" height="600" fill="url(#bg-horarios)"/>
+  <rect width="960" height="600" fill="url(#grid-horarios)"/>
+  <rect width="960" height="600" fill="url(#glow-horarios)"/>
+
+  <!-- Application Window -->
+  <g transform="translate(46, 38)" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif">
+    <rect width="868" height="524" rx="18" fill="#091020" stroke="#38bdf8" stroke-opacity="0.28" stroke-width="1.2"/>
+
+    <!-- Window Top Bar -->
+    <rect width="868" height="54" rx="18" fill="#0f172a"/>
+    <rect y="36" width="868" height="18" fill="#0f172a"/>
+    <line x1="0" y1="54" x2="868" y2="54" stroke="#1e293b"/>
+    <circle cx="26" cy="27" r="5" fill="#475569"/>
+    <circle cx="44" cy="27" r="5" fill="#475569"/>
+    <circle cx="62" cy="27" r="5" fill="#475569"/>
+    <text x="90" y="31" fill="#e2e8f0" font-size="13" font-weight="700">Armador de Horarios UPAO</text>
+    <text x="278" y="31" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="11">PWA · Web Worker</text>
+
+    <!-- Export actions -->
+    <g transform="translate(566, 14)" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">
+      <rect width="74" height="26" rx="7" fill="#1e293b" stroke="#334155"/>
+      <text x="37" y="17" text-anchor="middle" fill="#cbd5e1">PNG</text>
+      <rect x="84" width="74" height="26" rx="7" fill="#1e293b" stroke="#334155"/>
+      <text x="121" y="17" text-anchor="middle" fill="#cbd5e1">PDF</text>
+      <rect x="168" width="110" height="26" rx="7" fill="#0284c7"/>
+      <text x="223" y="17" text-anchor="middle" fill="#f8fafc">Exportar .ics</text>
+    </g>
+
+    <!-- Left Sidebar: Courses & Backtracking status -->
+    <g transform="translate(22, 74)">
+      <text x="0" y="14" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">COMBINACIÓN #03 DE 18</text>
+      <text x="0" y="34" fill="#f8fafc" font-size="16" font-weight="800">0 cruces detectados</text>
+
+      <!-- Course items -->
+      <g transform="translate(0, 52)">
+        <rect width="218" height="68" rx="11" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.35"/>
+        <rect x="10" y="14" width="4" height="40" rx="2" fill="#38bdf8"/>
+        <text x="24" y="30" fill="#f8fafc" font-size="12.5" font-weight="700">Ingeniería de Software</text>
+        <text x="24" y="49" fill="#94a3b8" font-size="11" font-family="'JetBrains Mono', monospace">Teoría + Lab · NRC 4821</text>
+      </g>
+
+      <g transform="translate(0, 132)">
+        <rect width="218" height="68" rx="11" fill="#0f172a" stroke="#60a5fa" stroke-opacity="0.35"/>
+        <rect x="10" y="14" width="4" height="40" rx="2" fill="#60a5fa"/>
+        <text x="24" y="30" fill="#f8fafc" font-size="12.5" font-weight="700">Inteligencia Artificial</text>
+        <text x="24" y="49" fill="#94a3b8" font-size="11" font-family="'JetBrains Mono', monospace">Teoría + Práctica · NRC 5104</text>
+      </g>
+
+      <g transform="translate(0, 212)">
+        <rect width="218" height="68" rx="11" fill="#0f172a" stroke="#34d399" stroke-opacity="0.35"/>
+        <rect x="10" y="14" width="4" height="40" rx="2" fill="#34d399"/>
+        <text x="24" y="30" fill="#f8fafc" font-size="12.5" font-weight="700">Bases de Datos Avanzadas</text>
+        <text x="24" y="49" fill="#94a3b8" font-size="11" font-family="'JetBrains Mono', monospace">Teoría + Lab · NRC 4912</text>
+      </g>
+
+      <g transform="translate(0, 292)">
+        <rect width="218" height="68" rx="11" fill="#0f172a" stroke="#818cf8" stroke-opacity="0.35"/>
+        <rect x="10" y="14" width="4" height="40" rx="2" fill="#818cf8"/>
+        <text x="24" y="30" fill="#f8fafc" font-size="12.5" font-weight="700">Redes y Comunicaciones</text>
+        <text x="24" y="49" fill="#94a3b8" font-size="11" font-family="'JetBrains Mono', monospace">Teoría · NRC 5230</text>
+      </g>
+
+      <!-- Solver info -->
+      <rect x="0" y="378" width="218" height="48" rx="10" fill="#0c1a30" stroke="#38bdf8" stroke-opacity="0.2"/>
+      <text x="14" y="398" fill="#cbd5e1" font-size="11" font-weight="600">Motor Backtracking</text>
+      <text x="14" y="415" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="10.5">Resuelto en 14 ms · Sin bloqueos</text>
+    </g>
+
+    <!-- Right Schedule Grid -->
+    <g transform="translate(264, 74)">
+      <rect width="582" height="426" rx="14" fill="#0c1426" stroke="#1e293b"/>
+
+      <!-- Day headers -->
+      <g font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#94a3b8">
+        <text x="86" y="28" text-anchor="middle">LUN</text>
+        <text x="190" y="28" text-anchor="middle">MAR</text>
+        <text x="294" y="28" text-anchor="middle">MIÉ</text>
+        <text x="398" y="28" text-anchor="middle">JUE</text>
+        <text x="502" y="28" text-anchor="middle">VIE</text>
+      </g>
+      <line x1="0" y1="42" x2="582" y2="42" stroke="#1e293b"/>
+
+      <!-- Time labels & horizontal lines -->
+      <g font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748b">
+        <text x="14" y="76">07:00</text>
+        <line x1="54" y1="72" x2="572" y2="72" stroke="#1e293b" stroke-dasharray="3 3"/>
+        <text x="14" y="136">09:00</text>
+        <line x1="54" y1="132" x2="572" y2="132" stroke="#1e293b" stroke-dasharray="3 3"/>
+        <text x="14" y="196">11:00</text>
+        <line x1="54" y1="192" x2="572" y2="192" stroke="#1e293b" stroke-dasharray="3 3"/>
+        <text x="14" y="256">14:00</text>
+        <line x1="54" y1="252" x2="572" y2="252" stroke="#1e293b" stroke-dasharray="3 3"/>
+        <text x="14" y="316">16:00</text>
+        <line x1="54" y1="312" x2="572" y2="312" stroke="#1e293b" stroke-dasharray="3 3"/>
+        <text x="14" y="376">18:00</text>
+        <line x1="54" y1="372" x2="572" y2="372" stroke="#1e293b" stroke-dasharray="3 3"/>
+      </g>
+
+      <!-- Vertical dividers -->
+      <g stroke="#1e293b" stroke-opacity="0.7">
+        <line x1="138" y1="42" x2="138" y2="426"/>
+        <line x1="242" y1="42" x2="242" y2="426"/>
+        <line x1="346" y1="42" x2="346" y2="426"/>
+        <line x1="450" y1="42" x2="450" y2="426"/>
+      </g>
+
+      <!-- Scheduled Blocks -->
+      <!-- Lun 07:00-10:30 Ing. Software -->
+      <g transform="translate(58, 56)">
+        <rect width="76" height="92" rx="9" fill="#0ea5e9" fill-opacity="0.18" stroke="#38bdf8" stroke-opacity="0.7"/>
+        <text x="8" y="22" fill="#e0f2fe" font-size="10.5" font-weight="700">Ing. Soft.</text>
+        <text x="8" y="38" fill="#7dd3fc" font-size="9.5" font-family="'JetBrains Mono', monospace">Teoría</text>
+        <text x="8" y="78" fill="#bae6fd" font-size="9" font-family="'JetBrains Mono', monospace">G-401</text>
+      </g>
+
+      <!-- Lun 14:00-16:30 IA -->
+      <g transform="translate(58, 244)">
+        <rect width="76" height="82" rx="9" fill="#3b82f6" fill-opacity="0.2" stroke="#60a5fa" stroke-opacity="0.75"/>
+        <text x="8" y="22" fill="#eff6ff" font-size="10.5" font-weight="700">Intel. Art.</text>
+        <text x="8" y="38" fill="#93c5fd" font-size="9.5" font-family="'JetBrains Mono', monospace">Teoría</text>
+        <text x="8" y="68" fill="#bfdbfe" font-size="9" font-family="'JetBrains Mono', monospace">H-202</text>
+      </g>
+
+      <!-- Mar 09:00-12:00 BD II -->
+      <g transform="translate(142, 118)">
+        <rect width="96" height="94" rx="9" fill="#10b981" fill-opacity="0.18" stroke="#34d399" stroke-opacity="0.7"/>
+        <text x="10" y="24" fill="#ecfdf5" font-size="11" font-weight="700">Base Datos</text>
+        <text x="10" y="40" fill="#6ee7b7" font-size="9.5" font-family="'JetBrains Mono', monospace">Teoría</text>
+        <text x="10" y="80" fill="#a7f3d0" font-size="9" font-family="'JetBrains Mono', monospace">G-304</text>
+      </g>
+
+      <!-- Mar 16:00-18:30 Redes -->
+      <g transform="translate(142, 304)">
+        <rect width="96" height="82" rx="9" fill="#6366f1" fill-opacity="0.2" stroke="#818cf8" stroke-opacity="0.75"/>
+        <text x="10" y="24" fill="#eef2ff" font-size="11" font-weight="700">Redes</text>
+        <text x="10" y="40" fill="#a5b4fc" font-size="9.5" font-family="'JetBrains Mono', monospace">Teoría</text>
+        <text x="10" y="68" fill="#c7d2fe" font-size="9" font-family="'JetBrains Mono', monospace">F-108</text>
+      </g>
+
+      <!-- Mie 08:00-10:30 Ing Soft Lab -->
+      <g transform="translate(246, 86)">
+        <rect width="96" height="86" rx="9" fill="#0ea5e9" fill-opacity="0.18" stroke="#38bdf8" stroke-opacity="0.7"/>
+        <text x="10" y="24" fill="#e0f2fe" font-size="11" font-weight="700">Ing. Soft.</text>
+        <text x="10" y="40" fill="#7dd3fc" font-size="9.5" font-family="'JetBrains Mono', monospace">Lab Liga A</text>
+        <text x="10" y="72" fill="#bae6fd" font-size="9" font-family="'JetBrains Mono', monospace">Lab G-405</text>
+      </g>
+
+      <!-- Jue 11:00-13:30 IA Practica -->
+      <g transform="translate(350, 178)">
+        <rect width="96" height="86" rx="9" fill="#3b82f6" fill-opacity="0.2" stroke="#60a5fa" stroke-opacity="0.75"/>
+        <text x="10" y="24" fill="#eff6ff" font-size="11" font-weight="700">Intel. Art.</text>
+        <text x="10" y="40" fill="#93c5fd" font-size="9.5" font-family="'JetBrains Mono', monospace">Práctica</text>
+        <text x="10" y="72" fill="#bfdbfe" font-size="9" font-family="'JetBrains Mono', monospace">Lab G-201</text>
+      </g>
+
+      <!-- Vie 09:00-11:30 BD Lab -->
+      <g transform="translate(454, 124)">
+        <rect width="116" height="86" rx="9" fill="#10b981" fill-opacity="0.18" stroke="#34d399" stroke-opacity="0.7"/>
+        <text x="10" y="24" fill="#ecfdf5" font-size="11" font-weight="700">Base Datos</text>
+        <text x="10" y="40" fill="#6ee7b7" font-size="9.5" font-family="'JetBrains Mono', monospace">Lab Liga B</text>
+        <text x="10" y="72" fill="#a7f3d0" font-size="9" font-family="'JetBrains Mono', monospace">Lab G-308</text>
+      </g>
+    </g>
+  </g>
+</svg>

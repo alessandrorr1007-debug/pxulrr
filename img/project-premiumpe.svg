@@ -1,1 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="PremiumPe"><defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1120"/><stop offset="1" stop-color="#1e293b"/></linearGradient></defs><rect width="960" height="540" fill="url(#bg)"/><circle cx="820" cy="80" r="220" fill="#34d399" opacity=".08"/><rect x="72" y="90" width="816" height="360" rx="24" fill="#0f172a" stroke="#34d399" stroke-opacity=".4"/><circle cx="104" cy="122" r="5" fill="#34d399"/><circle cx="124" cy="122" r="5" fill="#34d399" opacity=".5"/><circle cx="144" cy="122" r="5" fill="#34d399" opacity=".25"/><path d="M72 150H888" stroke="#34d399" stroke-opacity=".2"/><text x="112" y="248" fill="#34d399" font-family="Arial,sans-serif" font-size="46" font-weight="700">PremiumPe</text><text x="112" y="298" fill="#cbd5e1" font-family="Arial,sans-serif" font-size="23">Pases digitales y membresías en Perú</text><rect x="112" y="340" width="180" height="6" rx="3" fill="#34d399"/><rect x="308" y="340" width="92" height="6" rx="3" fill="#34d399" opacity=".25"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="PremiumPe — Catálogo digital de suscripciones y panel de gestión">
+  <defs>
+    <linearGradient id="bg-prem" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050a14"/>
+      <stop offset="55%" stop-color="#0a1526"/>
+      <stop offset="100%" stop-color="#0d1e33"/>
+    </linearGradient>
+    <radialGradient id="glow-prem" cx="0.8" cy="0.18" r="0.6">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="btn-prem" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <pattern id="grid-prem" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#38bdf8" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="960" height="600" fill="url(#bg-prem)"/>
+  <rect width="960" height="600" fill="url(#grid-prem)"/>
+  <rect width="960" height="600" fill="url(#glow-prem)"/>
+
+  <!-- Main Storefront Browser Frame -->
+  <g transform="translate(46, 38)" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif">
+    <rect width="868" height="524" rx="18" fill="#091020" stroke="#38bdf8" stroke-opacity="0.28" stroke-width="1.2"/>
+
+    <!-- Top Nav Bar -->
+    <rect width="868" height="58" rx="18" fill="#0f172a"/>
+    <rect y="38" width="868" height="20" fill="#0f172a"/>
+    <line x1="0" y1="58" x2="868" y2="58" stroke="#1e293b"/>
+
+    <text x="28" y="36" fill="#f8fafc" font-size="18" font-weight="800" letter-spacing="-0.4">Premium<tspan fill="#38bdf8">Pe</tspan></text>
+    <text x="158" y="35" fill="#94a3b8" font-size="12" font-weight="500">Catálogo</text>
+    <text x="234" y="35" fill="#94a3b8" font-size="12" font-weight="500">Membresías</text>
+    <text x="330" y="35" fill="#94a3b8" font-size="12" font-weight="500">Disponibilidad</text>
+
+    <!-- Realtime sync indicator -->
+    <rect x="650" y="16" width="192" height="26" rx="7" fill="#0b1f2a" stroke="#34d399" stroke-opacity="0.35"/>
+    <text x="746" y="33" text-anchor="middle" fill="#6ee7b7" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">Supabase · Tiempo real</text>
+
+    <!-- Hero Strip inside Storefront -->
+    <g transform="translate(28, 82)">
+      <text x="0" y="18" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">CATÁLOGO EN SOLES (PEN)</text>
+      <text x="0" y="48" fill="#f8fafc" font-size="26" font-weight="800" letter-spacing="-0.6">Pases digitales y membresías en Perú</text>
+      <text x="0" y="72" fill="#94a3b8" font-size="13">Gestión de stock, precios actualizados al instante y administración centralizada.</text>
+    </g>
+
+    <!-- 3 Product Cards Row -->
+    <g transform="translate(28, 178)">
+      <!-- Card 1 -->
+      <g>
+        <rect width="256" height="196" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.35"/>
+        <text x="18" y="30" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">DISPONIBLE</text>
+        <text x="18" y="58" fill="#f8fafc" font-size="16" font-weight="700">Streaming HD · 1 Mes</text>
+        <text x="18" y="80" fill="#94a3b8" font-size="12">Entrega inmediata · Perfil privado</text>
+        <text x="18" y="128" fill="#f8fafc" font-size="28" font-weight="800" font-family="'JetBrains Mono', monospace">S/ 14.90</text>
+        <rect x="18" y="146" width="220" height="34" rx="9" fill="url(#btn-prem)"/>
+        <text x="128" y="168" text-anchor="middle" fill="#030712" font-size="12" font-weight="700">Solicitar pase</text>
+      </g>
+
+      <!-- Card 2 -->
+      <g transform="translate(278, 0)">
+        <rect width="256" height="196" rx="14" fill="#0f172a" stroke="#1e293b"/>
+        <text x="18" y="30" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">DISPONIBLE</text>
+        <text x="18" y="58" fill="#f8fafc" font-size="16" font-weight="700">Productividad Pro · 3M</text>
+        <text x="18" y="80" fill="#94a3b8" font-size="12">Renovación asistida · Garantía</text>
+        <text x="18" y="128" fill="#f8fafc" font-size="28" font-weight="800" font-family="'JetBrains Mono', monospace">S/ 32.00</text>
+        <rect x="18" y="146" width="220" height="34" rx="9" fill="#1e293b" stroke="#334155"/>
+        <text x="128" y="168" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="600">Ver detalles</text>
+      </g>
+
+      <!-- Card 3: Admin Panel Preview -->
+      <g transform="translate(556, 0)">
+        <rect width="256" height="196" rx="14" fill="#0d1b2f" stroke="#38bdf8" stroke-opacity="0.4"/>
+        <text x="18" y="30" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">PANEL ADMIN</text>
+        <text x="18" y="56" fill="#f8fafc" font-size="15" font-weight="700">Control en tiempo real</text>
+
+        <line x1="18" y1="72" x2="238" y2="72" stroke="#1e293b"/>
+
+        <text x="18" y="96" fill="#cbd5e1" font-size="11.5">Stock activo</text>
+        <text x="238" y="96" text-anchor="end" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700">12 productos</text>
+
+        <text x="18" y="124" fill="#cbd5e1" font-size="11.5">Precios PEN</text>
+        <text x="238" y="124" text-anchor="end" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700">Editables</text>
+
+        <text x="18" y="152" fill="#cbd5e1" font-size="11.5">Publicación</text>
+        <text x="238" y="152" text-anchor="end" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700">Netlify CDN</text>
+
+        <rect x="18" y="166" width="220" height="6" rx="3" fill="#1e293b"/>
+        <rect x="18" y="166" width="168" height="6" rx="3" fill="#38bdf8"/>
+      </g>
+    </g>
+
+    <!-- Bottom Admin Bar Summary -->
+    <g transform="translate(28, 398)">
+      <rect width="812" height="96" rx="14" fill="#0c1527" stroke="#1e293b"/>
+      <g transform="translate(24, 24)">
+        <text x="0" y="14" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10.5">STACK DE PRODUCCIÓN</text>
+        <text x="0" y="42" fill="#f8fafc" font-size="15" font-weight="700">React · Vite · Tailwind CSS · Supabase</text>
+      </g>
+      <line x1="420" y1="18" x2="420" y2="78" stroke="#1e293b"/>
+      <g transform="translate(446, 24)">
+        <text x="0" y="14" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10.5">SINCRONIZACIÓN</text>
+        <text x="0" y="42" fill="#34d399" font-size="15" font-weight="700">Cambios instantáneos en catálogo</text>
+      </g>
+    </g>
+  </g>
+</svg>
