@@ -44,12 +44,12 @@
   }
   </script>
 
-  <!-- Three.js Import Map (served locally from /vendor/three) -->
+  <!-- Three.js import map: absolute CDN URLs work on root domains and GitHub Pages project subpaths -->
   <script type="importmap">
   {
     "imports": {
-      "three": "/vendor/three/build/three.module.js",
-      "three/addons/": "/vendor/three/examples/jsm/"
+      "three": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/"
     }
   }
   </script>
