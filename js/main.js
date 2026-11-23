@@ -1,4 +1,3 @@
-import { createStudioScene } from './scene3d.js';
 
 /**
  * Pxul.dev (FOLDER) — Controlador Principal del Estudio 3D & 2D
@@ -163,11 +162,17 @@ function setRenderMode(nextMode, persist = true) {
   }
 }
 
-function init3DStudio() {
+let sceneLoadPending = false;
+async function init3DStudio() {
   const mountEl = document.getElementById('scene-mount');
-  if (!mountEl || state.studio3d) return;
+  if (!mountEl || state.studio3d || sceneLoadPending) return;
+  sceneLoadPending = true;
 
   try {
+    // Load WebGL dependencies only when 3D is requested. Keep the entire
+    // desktop/mobile 2D site functional if the CDN or WebGL is unavailable.
+    const { createStudioScene } = await import('./scene3d.js');
+    if (state.mode !== '3d') return;
     state.studio3d = createStudioScene({
       mountEl,
       initialTheme: state.theme,
@@ -186,8 +191,12 @@ function init3DStudio() {
         setRenderMode('lite', false);
       },
     });
-  } catch {
+  } catch (error) {
+    console.warn('El estudio 3D no pudo cargarse; la versión 2D continúa disponible.', error);
+    showToast('No se pudo cargar el 3D. Puedes explorar FOLDER en vista 2D.');
     setRenderMode('lite', false);
+  } finally {
+    sceneLoadPending = false;
   }
 }
 
